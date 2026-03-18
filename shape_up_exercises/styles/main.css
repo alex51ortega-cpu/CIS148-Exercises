@@ -23,6 +23,7 @@ header img {
 
 section h1 {
     font-size: 24px;
+    clear: left;
 }
 
 section a {

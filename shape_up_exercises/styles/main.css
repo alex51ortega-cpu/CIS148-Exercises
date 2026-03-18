@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    font-weight: bold;
+}
+
+header h1 {
+    font-size: 32px;
+    color: steelblue;
+    font-style: italic;
+}
+
+header h2 {
+    font-size: 20px;
+}
+
+header img {
+    float: left;
+    margin-right: 15px;
+}
+
+section h1 {
+    font-size: 24px;
+}
+
+section a {
+    color: maroon;
+}
+
+section a:hover {
+    color: steelblue;
+}
+
+section a:focus {
+    color: steelblue;
+}
+
+aside h2 {
+    color: maroon;
+}
+
+aside ul {
+    line-height: 1.5;
+}
+
+aside a {
+    color: steelblue;
+}
+
+aside a:hover {
+    color: maroon;
+}
+
+aside a:focus {
+    color: maroon;
+}
+
+footer {
+    font-size: 12px;
+    text-align: center;
+}

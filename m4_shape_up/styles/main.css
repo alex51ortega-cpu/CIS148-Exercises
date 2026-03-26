@@ -45,6 +45,11 @@ section {
     padding: 20px;
 }
 
+section > p:first-of-type {
+    padding-left: 40px
+    margin-bottom: 20px
+}
+
 section h1 {
     font-size: 24px;
     clear: left; 

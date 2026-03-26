@@ -45,11 +45,12 @@ section {
     padding: 20px;
 }
 
-h2 + p {
+blockquote {
     margin-left: 60px;
     margin-right: 20px;
-    margin-bottom: 20px;
-    font-style: italic;
+    margin-bottom: 30px;
+    font-style: italic;  
+    line-height: 1.5;
 }
 
 section h1 {

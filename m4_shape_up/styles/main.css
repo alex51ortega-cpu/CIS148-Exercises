@@ -7,11 +7,12 @@
 html {
     background-color: #e6e6e6; 
     padding: 40px;
-    
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     width: 700px;
-    margin: 20px auto; 
+    margin: 0 auto; 
     background-color: white;
     border: 2px solid steelblue;
     box-shadow: 0 5px 15px 5px black; 
@@ -45,7 +46,18 @@ section {
 section h1 {
     font-size: 24px;
     clear: left; 
-    margin-bottom: 10px;
+    margin-bottom: 20px; 
+}
+
+section h3 {
+    font-size: 18px;
+    margin-top: 25px;    
+    margin-bottom: 10px; 
+}
+
+section p {
+    margin-bottom: 20px; 
+    line-height: 1.5;
 }
 
 aside {

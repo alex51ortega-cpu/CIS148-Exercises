@@ -1,9 +1,27 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-a {
-    font-weight: bold;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 700px;
+    margin: 20px auto; 
+    background-color: white;
+    border: 2px solid steelblue;
+    box-shadow: 5px 5px 10px black; 
+}
+
+header {
+    background: linear-gradient(to bottom, white, lightsteelblue);
+    border-bottom: 3px solid steelblue;
+    padding: 20px;
+}
+
+header img {
+    float: left;
+    margin-right: 15px;
 }
 
 header h1 {
@@ -16,49 +34,57 @@ header h2 {
     font-size: 20px;
 }
 
-header img {
-    float: left;
-    margin-right: 15px;
+section {
+    padding: 20px;
 }
 
 section h1 {
     font-size: 24px;
-    clear: left;
+    clear: left; 
+    margin-bottom: 10px;
+}
+
+aside {
+    margin: 20px;
+    padding: 15px;
+    border: 2px solid steelblue;
+    border-radius: 15px; 
+}
+
+aside h2 {
+    color: maroon;
+    margin-bottom: 10px;
+}
+
+aside ul {
+    line-height: 1.5;
+    list-style-position: inside;
+}
+
+footer {
+    background-color: steelblue;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    padding: 15px;
+}
+
+a {
+    font-weight: bold;
 }
 
 section a {
     color: maroon;
 }
 
-section a:hover {
+section a:hover, section a:focus {
     color: steelblue;
-}
-
-section a:focus {
-    color: steelblue;
-}
-
-aside h2 {
-    color: maroon;
-}
-
-aside ul {
-    line-height: 1.5;
 }
 
 aside a {
     color: steelblue;
 }
 
-aside a:hover {
+aside a:hover, aside a:focus {
     color: maroon;
-}
-
-aside a:focus {
-    color: maroon;
-}
-
-footer {
-    font-size: 12px;
-    text-align: center;
 }

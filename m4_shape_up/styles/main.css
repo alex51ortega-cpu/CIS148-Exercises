@@ -41,6 +41,7 @@ header h2 {
 
 section {
     padding: 20px;
+    padding-bottom: 0;
 }
 
 section h1 {
@@ -61,7 +62,7 @@ section p {
 }
 
 aside {
-    margin: 20px;
+    margin: 0 20px 20px 20px;
     padding: 15px;
     border: 2px solid steelblue;
     border-radius: 15px; 

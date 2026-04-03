@@ -1,27 +1,29 @@
 /* variables */
 :root {
-	--primary-color: #931420;
-	--accent-color: #f6bb73;
-	--light-accent: #fffded;
-	--light: white;
-	--dark: black;
+    --primary-color: #931420;
+    --accent-color: #f6bb73;
+    --light-accent: #fffded;
+    --light: white;
+    --dark: black;
 }
 
 /* reset */
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* the default styles for the elements */
+/* default styles */
 body {
-	font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
-    width: 80%;
+    width: 95%; 
+    max-width: 1024px; /* Sets max limit for width */
     margin: auto;
     border: 3px solid var(--primary-color);
 }
+
 header, section, aside, footer { padding: 1em; }
 h1, h2, h3, p, article { padding-bottom: .5em; }
 h1 { font-size: 150%; }
@@ -29,65 +31,80 @@ h2 { font-size: 120%; }
 h3 { font-size: 110%; }
 a:focus, a:hover { font-style: italic; }
 
-/* the styles for the header */
+/* header styles */
 header {
-	border-bottom: 3px solid var(--primary-color);
-	background-image: linear-gradient(30deg, 
-		var(--accent-color) 0%, 
-		var(--light-accent) 25%, 
-		var(--light) 50%, 
-		var(--light-accent) 75%, 
-		var(--accent-color) 100%);
-	& h2 {
-		font-size: 175%;
-		color: var(--primary-color);
-		padding-bottom: 0;
-	}
-	& h3 {
-		font-size: 130%;
-		font-style: italic;
-	}
-	& img {
-		float: left;
-		margin: 0 30px;
-	}
+    border-bottom: 3px solid var(--primary-color);
+    background-image: linear-gradient(30deg, 
+        var(--accent-color) 0%, 
+        var(--light-accent) 25%, 
+        var(--light) 50%, 
+        var(--light-accent) 75%, 
+        var(--accent-color) 100%);
+    
+    & h2 {
+        font-size: 175%;
+        color: var(--primary-color);
+        padding-bottom: 0;
+    }
+    & h3 {
+        font-size: 130%;
+        font-style: italic;
+    }
+    & img {
+        float: left;
+        margin: 0 30px;
+    }
 }
 
-/* the styles for the main element */
+/* 2 column organized and restructured */
 main {
-	clear: left;
+    clear: left;
+    display: flex;
+    flex-direction: row-reverse; /* Aside on left and section on right */
+    gap: 20px;
 }
 
-/* the styles for the section */
+/* Section and article styles */
 section {
-	& h1 {
-		color: var(--primary-color);
-	}
+    flex: 3; /* Article column made a bit wider */
+    & h1 {
+        color: var(--primary-color);
+    }
 }
 
-/* the styles for the article */
-article {
-	& img {
-		border: 1px solid var(--dark);
-	}
+article img {
+    float: left;            /* Float image left */
+    max-width: 40%;         /* Resizeable image */
+    height: auto;
+    margin-right: 20px;     /* Space around image */
+    margin-bottom: 10px;
+    border: 1px solid var(--dark);
 }
 
-/* the styles for the aside */
+/* Aside styles */
 aside {
-	& h2 {
-		color: var(--primary-color);
-	}
-	& img {
-		margin-bottom: .9em;
-	}
+    flex: 1; /* Sidebar */
+    border-right: 1px solid #ccc;
+    
+    & h2 {
+        color: var(--primary-color);
+    }
+    & img {
+        display: block;
+        max-width: 100%; /* Photos stays in sidebar */
+        height: auto;
+        margin-bottom: .9em;
+    }
 }
 
-/* the styles for the footer */
+/* footer styles */
 footer {
-	background-color: var(--primary-color);
-	& p {
-		text-align: center;
-		color: white;
-		padding-bottom: 0; 
-	}
+    clear: both; /* Makes sure footer stays under all floated elements */
+    background-color: var(--primary-color);
+    
+    & p {
+        text-align: center;
+        color: white;
+        padding-bottom: 0; 
+    }
 }

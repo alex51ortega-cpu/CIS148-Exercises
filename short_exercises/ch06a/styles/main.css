@@ -61,7 +61,7 @@ main {
     clear: left;
     display: flex;
     flex-direction: row-reverse; /* Aside on left and section on right */
-    gap: 20px;
+    gap: 15px;
 }
 
 /* Section and article styles */

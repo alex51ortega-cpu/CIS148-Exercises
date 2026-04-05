@@ -70,16 +70,22 @@ section h1 {
     color: black;
 }
 
-h2 {
+section h2 {
     color: black; 
     font-size: 2.2vw; 
+    margin-bottom: 1.5vw;
+}
+
+aside h2 {
+    color: maroon;
+    font-size: 2.2vw;
     margin-bottom: 1.5vw;
 }
 
 h3 a {
     color: maroon;
     font-size: 1.8vw;
-    text-decoration: none;
+    text-decoration: underline;
     font-weight: bold;
 }
 
@@ -115,4 +121,5 @@ aside ul li a {
     color: steelblue; 
     font-size: 1.3vw;
     font-weight: bold;
+    text-decoration: underline; 
 }

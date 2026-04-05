@@ -10,10 +10,10 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    width: 100%;            
-    margin: 0;              
+    width: 100%;             
+    margin: 0;               
     background-color: white;
-    border: none;        
+    border: none;            
 }
 
 header {
@@ -26,50 +26,62 @@ header {
 header img {
     float: left;
     margin-right: 15px;
-    width: 15%;             
-    max-width: 120px;       
+    width: 15%;              
+    max-width: 120px;        
     min-width: 100px;        
 }
 
 header h1 {
-    font-size: 3.5vw;        
+    font-size: 3.5vw;   
     color: steelblue;
     font-style: italic;
 }
 
 header h2 {
-    font-size: 2vw;          
+    font-size: 2vw;    
     margin-top: -5px;
+    color: black;           
 }
-
 
 main {
     display: flex;           
-    width: 100%;           
+    width: 100%;             
+    align-items: flex-start; 
 }
 
 section {
-    flex: 3;               
+    flex: 3;                 
     padding: 20px;
 }
 
 aside {
-    flex: 1;           
-    margin: 20px;          
+    flex: 1;                 
+    margin: 20px;            
     padding: 15px;
     border: 2px solid steelblue;
     border-radius: 15px; 
     height: fit-content;
+    background-color: #f9f9f9; 
 }
 
-
 section h1 {
-    font-size: 2.5vw;      
+    font-size: 2.5vw;        
     margin-bottom: 20px;
 }
 
+h2 {
+    color: maroon;
+    font-size: 1.8vw;
+    margin-bottom: 15px;
+}
+
+h3 a {
+    color: maroon;
+    text-decoration: none;
+}
+
 section p, aside ul {
-    font-size: 1.2vw;       
+    font-size: 1.2vw;        
     line-height: 1.5;
     margin-bottom: 20px;
 }
@@ -78,8 +90,9 @@ blockquote {
     margin: 0 20px 30px 40px;
     font-style: italic;  
     line-height: 1.5;
+    border-left: 5px solid lightsteelblue;
+    padding-left: 15px;
 }
-
 
 footer {
     background-color: steelblue;
@@ -87,8 +100,9 @@ footer {
     font-size: 12px;
     text-align: center;
     padding: 15px;
+    margin-top: 20px;
 }
 
 a { font-weight: bold; }
-section a { color: maroon; }
-aside a { color: steelblue; }
+section p a { color: maroon; }
+aside ul li a { color: steelblue; }

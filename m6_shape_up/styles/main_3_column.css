@@ -1,0 +1,27 @@
+main {
+    display: flex;           
+    flex-direction: row;    
+    width: 100%;             
+    align-items: flex-start; 
+}
+
+.left-sidebar {
+    flex: 1;                 
+    order: 1;                
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+section {
+    flex: 2;              
+    order: 2;              
+    padding: 20px;
+}
+
+.right-sidebar {
+    flex: 1;                 
+    order: 3;              
+    padding: 20px;
+    border: 2px solid steelblue;
+    border-radius: 15px;
+}

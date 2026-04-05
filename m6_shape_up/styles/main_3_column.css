@@ -102,11 +102,11 @@ p, li {
 }
 
 blockquote {
-    margin: 1vw 2vw 2vw 3vw;
+    margin: 1vw 40px 1.5vw 40px;
     font-style: italic;  
-    font-size: 1.2vw;
-    border-left: 0.4vw solid lightsteelblue;
-    padding-left: 1vw;
+    font-size: 1.3vw;
+    border-left: none;
+    padding-left: 0;
 }
 
 aside ul { list-style: none; }

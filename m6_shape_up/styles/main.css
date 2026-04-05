@@ -1,1 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+html {
+    background-color: #e6e6e6; 
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;            
+    margin: 0;              
+    background-color: white;
+    border: none;        
+}
+
+header {
+    background: linear-gradient(to bottom, white, lightsteelblue);
+    border-bottom: 3px solid steelblue;
+    padding: 20px;
+    overflow: hidden; 
+}
+
+header img {
+    float: left;
+    margin-right: 15px;
+    width: 15%;             
+    max-width: 120px;       
+    min-width: 100px;        
+}
+
+header h1 {
+    font-size: 3.5vw;        
+    color: steelblue;
+    font-style: italic;
+}
+
+header h2 {
+    font-size: 2vw;          
+    margin-top: -5px;
+}
+
+
+main {
+    display: flex;           
+    width: 100%;           
+}
+
+section {
+    flex: 3;               
+    padding: 20px;
+}
+
+aside {
+    flex: 1;           
+    margin: 20px;          
+    padding: 15px;
+    border: 2px solid steelblue;
+    border-radius: 15px; 
+    height: fit-content;
+}
+
+
+section h1 {
+    font-size: 2.5vw;      
+    margin-bottom: 20px;
+}
+
+section p, aside ul {
+    font-size: 1.2vw;       
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+blockquote {
+    margin: 0 20px 30px 40px;
+    font-style: italic;  
+    line-height: 1.5;
+}
+
+
+footer {
+    background-color: steelblue;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    padding: 15px;
+}
+
+a { font-weight: bold; }
+section a { color: maroon; }
+aside a { color: steelblue; }

@@ -128,10 +128,12 @@ aside h2 {
 
 footer {
     background-color: var(--primary-color);
+    padding: 1em;
+    clear: both;
 }
 
 footer p {
     text-align: center;
     color: white;
-    padding-bottom: 0; 
+    padding-bottom: 0;
 }

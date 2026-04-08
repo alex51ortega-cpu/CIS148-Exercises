@@ -125,7 +125,8 @@ aside h2 {
 #nav_menu a.current:hover {
     font-style: normal;                   
     cursor: default;                   
-
+}
+    
 footer {
     background-color: #931420; 
     display: block;          

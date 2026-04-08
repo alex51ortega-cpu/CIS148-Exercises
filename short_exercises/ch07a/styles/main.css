@@ -127,13 +127,14 @@ aside h2 {
     cursor: default;                   
 
 footer {
-    background-color: var(--primary-color);
-    padding: 1em;
-    clear: both;
+    background-color: #931420 !important; 
+    padding: 20px !important;            
+    display: block !important;          
+    width: 100%;
 }
 
 footer p {
+    color: white !important;
     text-align: center;
-    color: white;
-    padding-bottom: 0;
+    margin: 0;
 }

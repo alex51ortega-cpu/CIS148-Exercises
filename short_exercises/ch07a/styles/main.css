@@ -1,103 +1,137 @@
 /* variables */
 :root {
-	--primary-color: #931420;
-	--accent-color: #f6bb73;
-	--light-accent: #fffded;
-	--light: white;
-	--dark: black;
+    --primary-color: #931420;
+    --accent-color: #f6bb73;
+    --light-accent: #fffded;
+    --light: white;
+    --dark: black;
 }
 
 /* reset */
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* the default styles for the elements */
 body {
-	font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
     width: 80%;
     margin: auto;
     border: 3px solid var(--primary-color);
 }
+
 header, section, aside, footer { padding: 1em; }
 h1, h2, h3, p, article { padding-bottom: .5em; }
 h1 { font-size: 150%; }
 h2 { font-size: 120%; }
 h3 { font-size: 110%; }
-a:focus, a:hover { font-style: italic; }
+
+a:not(.current):focus, a:not(.current):hover { 
+    font-style: italic; 
+}
 
 /* the styles for the header */
 header {
-	border-bottom: 3px solid var(--primary-color);
-	background-image: linear-gradient(30deg, 
-		var(--accent-color) 0%, 
-		var(--light-accent) 25%, 
-		var(--light) 50%, 
-		var(--light-accent) 75%, 
-		var(--accent-color) 100%);
-	& h2 {
-		font-size: 175%;
-		color: var(--primary-color);
-		padding-bottom: 0;
-	}
-	& h3 {
-		font-size: 130%;
-		font-style: italic;
-	}
-	& img {
-		float: left;
-		margin: 0 30px;
-		width: clamp(40px, 15%, 66px);
-	}
+    border-bottom: 3px solid var(--primary-color);
+    background-image: linear-gradient(30deg, 
+        var(--accent-color) 0%, 
+        var(--light-accent) 25%, 
+        var(--light) 50%, 
+        var(--light-accent) 75%, 
+        var(--accent-color) 100%);
+}
+
+header h2 {
+    font-size: 175%;
+    color: var(--primary-color);
+    padding-bottom: 0;
+}
+
+header h3 {
+    font-size: 130%;
+    font-style: italic;
+}
+
+header img {
+    float: left;
+    margin: 0 30px;
+    width: clamp(40px, 15%, 66px);
 }
 
 /* the styles for the main element */
 main {
-	clear: left;
-	display: flex;
+    clear: left;
+    display: flex;
 }
 
 /* the styles for the section */
 section {
-	order: 2;
-	flex-basis: 75%;
-	& h1 {
-		color: var(--primary-color);
-		margin: 0;
-	}
+    order: 2;
+    flex-basis: 75%;
+}
+
+section h1 {
+    color: var(--primary-color);
+    margin: 0;
 }
 
 /* the styles for the article */
-article {
-	& img {
-		float: left;
-		margin: .25em 1em 1em 0;
-		border: 1px solid var(--dark);
-		width: min(100%, 225px);
-	}
+article img {
+    float: left;
+    margin: .25em 1em 1em 0;
+    border: 1px solid var(--dark);
+    width: min(100%, 225px);
 }
 
 /* the styles for the aside */
 aside {
-	order: 1;
-	flex-basis: 25%;
-	& h2 {
-		color: var(--primary-color);
-	}
-	& img {
-		margin-bottom: .9em;
-	}
+    order: 1;
+    flex-basis: 25%;
 }
 
-/* the styles for the footer */
+aside h2 {
+    color: var(--primary-color);
+}
+
+#nav_menu ul {
+    list-style-type: none;
+}
+
+#nav_menu li {
+    background-color: var(--primary-color); 
+    border: 1px solid var(--light);     
+}
+
+#nav_menu a {
+    display: block;           
+    padding: .5em 1em;
+    text-decoration: none;
+    color: var(--light);     
+    font-weight: bold;         
+}
+
+#nav_menu a:hover, #nav_menu a:focus {
+    color: var(--accent-color); 
+}
+
+#nav_menu a.current {
+    background-color: var(--accent-color);
+    color: var(--dark);              
+}
+
+#nav_menu a.current:hover {
+    font-style: normal;                   
+    cursor: default;                   
+
 footer {
-	background-color: var(--primary-color);
-	& p {
-		text-align: center;
-		color: white;
-		padding-bottom: 0; 
-	}
+    background-color: var(--primary-color);
+}
+
+footer p {
+    text-align: center;
+    color: white;
+    padding-bottom: 0; 
 }

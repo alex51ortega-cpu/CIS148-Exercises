@@ -4,9 +4,7 @@
     box-sizing: border-box;
 }
 
-html {
-    background-color: #e6e6e6; 
-}
+html { background-color: #e6e6e6; }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -42,25 +40,21 @@ header h2 {
     color: black;
 }
 
-.navbar {
-    background-color: #4682b4; 
-}
+.navbar { background-color: #4682b4; }
 
 .menu {
     display: flex;
-    flex-wrap: wrap;     
+    flex-wrap: wrap;
     list-style: none;
     padding: 5px 20px;
 }
 
-.menu li {
-    position: relative;   
-}
+.menu li { position: relative; }
 
 .menu a {
     display: block;
     padding: 10px 15px;
-    color: white;       
+    color: white;
     text-decoration: none;
     font-weight: bold;
 }
@@ -72,96 +66,57 @@ header h2 {
 }
 
 .submenu {
-    display: none;        
-    position: absolute;    
-    top: 100%;          
+    display: none;
+    position: absolute;
+    top: 100%;
     left: 0;
     background-color: #4682b4;
-    min-width: 180px;
-    z-index: 100;        
+    min-width: 200px;
+    z-index: 100;
     list-style: none;
     padding: 5px 0;
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.menu li:hover .submenu {
-    display: block;
-}
+.menu li:hover .submenu { display: block; }
 
-.submenu a {
-    padding: 8px 20px;
-    font-size: 0.9em;
-    border: none;         
-}
+.submenu li a { padding: 10px 20px; font-size: 14px; }
 
 main {
-    display: flex;           
-    width: 100%;             
-    align-items: flex-start; 
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
 }
 
 section {
-    flex: 3;                 
-    padding: 20px 30px; 
+    flex: 3;
+    padding: 20px 30px;
 }
 
 aside {
-    flex: 1;                 
-    margin: 20px 20px 0 0;      
+    flex: 1;
+    margin: 20px 20px 0 0;
     padding: 15px;
     border: 2px solid steelblue;
-    border-radius: 15px; 
-    background-color: white; 
+    border-radius: 15px;
+    background-color: white;
 }
 
-section h1 {
-    font-size: 26px;        
-    margin-bottom: 15px;
-    font-weight: bold;
-}
+section h1 { font-size: 26px; margin-bottom: 15px; }
 
-section h2 {
-    font-size: 22px; 
-    margin: 20px 0 10px 0;
-}
-
-h3 {
-    margin-top: 15px;
-    margin-bottom: 5px;
-    color: maroon;
-    font-size: 18px;
-}
-
-p, li {
-    font-size: 14px; 
-    line-height: 1.5;
-    margin-bottom: 15px;
-}
+p { font-size: 14px; line-height: 1.5; margin-bottom: 15px; }
 
 blockquote {
     margin: 0 40px 15px 40px;
     font-style: italic;
     font-size: 14px;
+    border-left: 5px solid steelblue; /
+    padding-left: 15px;
 }
 
-aside h2 {
-    color: maroon;
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-aside ul {
-    list-style: none;
-}
-
-aside ul li {
-    margin-bottom: 10px;
-}
-
-aside ul li a {
-    color: steelblue;
-    font-weight: bold;
-    text-decoration: underline;
-}
+aside h2 { color: maroon; font-size: 1.2em; margin-bottom: 10px; }
+aside ul { list-style: none; }
+aside ul li a { color: steelblue; font-weight: bold; text-decoration: underline; }
 
 footer {
     background-color: steelblue;

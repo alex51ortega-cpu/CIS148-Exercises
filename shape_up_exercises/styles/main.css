@@ -25,7 +25,6 @@ header img {
     margin-right: 15px;
     width: 15%;              
     max-width: 120px;        
-    min-width: 100px;        
 }
 
 header h1 {
@@ -36,7 +35,6 @@ header h1 {
 
 header h2 {
     font-size: 2vw;       
-    margin-top: -5px;
     color: black;
 }
 
@@ -103,6 +101,15 @@ aside {
 }
 
 section h1 { font-size: 26px; margin-bottom: 15px; }
+section h2 { font-size: 22px; margin-top: 20px; }
+
+h3 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: maroon;
+    font-size: 18px;
+    font-weight: bold;
+}
 
 p { font-size: 14px; line-height: 1.5; margin-bottom: 15px; }
 
@@ -110,7 +117,6 @@ blockquote {
     margin: 0 40px 15px 40px;
     font-style: italic;
     font-size: 14px;
-    padding-left: 15px;
 }
 
 aside h2 { color: maroon; font-size: 1.2em; margin-bottom: 10px; }

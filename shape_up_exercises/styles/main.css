@@ -39,24 +39,22 @@ header h2 {
 }
 
 .navbar { 
-    background-color: #4682b4; 
+    background-color: #4682b4;
 }
 
 .menu {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;  
     list-style: none;
-    padding: 5px 20px;
+    padding: 2px 20px;    
 }
 
-.menu li { 
-    position: 
-    relative; }
+.menu li { position: relative; }
 
 .menu a {
     display: block;
     padding: 8px 15px;
-    color: white;
+    color: white;        
     text-decoration: none;
     font-weight: bold;
 }
@@ -68,26 +66,30 @@ header h2 {
 }
 
 .submenu {
-    display: none;
-    position: absolute;
-    top: 100%;
+    display: none;         
+    position: absolute;  
+    top: 100%;             
     left: 0;
     background-color: #4682b4;
-    min-width: 100px;
-    z-index: 100;
+    min-width: 200px;
+    z-index: 100;          
     list-style: none;
-    padding: 2px 0;
+    padding: 5px 0;
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.menu li:hover .submenu { 
-    display: 
-    block; 
+.menu li:hover .submenu {
+    display: block;       
 }
 
-.submenu li a { 
-    padding: 5px 15px; 
-    font-size: 13px; }
+.submenu li a {
+    padding: 5px 20px;    
+    font-size: 13px;
+}
+
+.submenu li a:hover {
+    background-color: #36648b; 
+}
 
 main {
     display: flex;
@@ -109,35 +111,17 @@ aside {
     background-color: white;
 }
 
-section h1 { 
-    font-size: 26px; 
-    margin-bottom: 15px; 
-}
-
-section h2 { 
-    font-size: 22px; 
-    margin-top: 20px; 
-}
-
-section h3 a {
-    color: maroon;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: underline; 
-}
+section h1 { font-size: 26px; margin-bottom: 15px; }
 
 h3 {
     margin-top: 15px;
     margin-bottom: 5px;
-    color: maroon;
+    color: maroon;      
     font-size: 18px;
     font-weight: bold;
 }
 
-p { font-size: 14px; 
-   line-height: 1.5; 
-   margin-bottom: 15px; 
-  }
+p { font-size: 14px; line-height: 1.5; margin-bottom: 15px; }
 
 blockquote {
     margin: 0 40px 15px 40px;
@@ -145,26 +129,9 @@ blockquote {
     font-size: 14px;
 }
 
-aside h2 { 
-    color: 
-    maroon; 
-    font-size: 1.2em; 
-    margin-bottom: 10px; 
-}
-
-aside ul { 
-    list-style: 
-    none; 
-}
-
-aside ul li a { 
-    color: 
-    steelblue; 
-    font-weight: 
-    bold; 
-    text-decoration: 
-    underline; 
-}
+aside h2 { color: maroon; font-size: 1.2em; margin-bottom: 10px; }
+aside ul { list-style: none; }
+aside ul li a { color: steelblue; font-weight: bold; text-decoration: underline; }
 
 footer {
     background-color: steelblue;

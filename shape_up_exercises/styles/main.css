@@ -51,7 +51,7 @@ header h2 {
 
 .menu a {
     display: block;
-    padding: 10px 15px;
+    padding: 8px 15px;
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -69,16 +69,18 @@ header h2 {
     top: 100%;
     left: 0;
     background-color: #4682b4;
-    min-width: 200px;
+    min-width: 100px;
     z-index: 100;
     list-style: none;
-    padding: 5px 0;
+    padding: 2px 0;
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .menu li:hover .submenu { display: block; }
 
-.submenu li a { padding: 10px 20px; font-size: 14px; }
+.submenu li a { 
+    padding: 5px 15px; 
+    font-size: 13px; }
 
 main {
     display: flex;

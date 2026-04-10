@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #e6e6e6; 
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;             
+    margin: 0;               
+    background-color: white;
+    border: none;            
+}
+
+header {
+    background: linear-gradient(to bottom, white, lightsteelblue);
+    border-bottom: 3px solid steelblue;
+    padding: 20px;
+    overflow: hidden; 
+}
+
+header img {
+    float: left;
+    margin-right: 15px;
+    width: 15%;              
+    max-width: 120px;        
+    min-width: 100px;        
+}
+
+header h1 {
+    font-size: 3.5vw; 
+    color: steelblue;
+    font-style: italic;
+}
+
+header h2 {
+    font-size: 2vw;       
+    margin-top: -5px;
+    color: black;
+}
+
+main {
+    display: flex;           
+    width: 100%;             
+    align-items: flex-start; 
+}
+
+section {
+    flex: 3;                 
+    padding: 20px 30px; 
+}
+
+aside {
+    flex: 1;                 
+    margin: 20px 20px 0 0;      
+    padding: 15px;
+    border: 2px solid steelblue;
+    border-radius: 15px; 
+    height: fit-content;
+    background-color: white; 
+}
+
+section h1 {
+    font-size: 26px;        
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: black;
+}
+
+section h2 {
+    color: black; 
+    font-size: 22px; 
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+aside h2 {
+    color: maroon;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+h3 a {
+    color: maroon;
+    font-size: 18px;
+    text-decoration: underline; 
+    font-weight: bold;
+}
+
+h3 {
+    margin-bottom: 5px;
+}
+
+
+p, li {
+    font-size: 14px; 
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+aside ul li a { 
+    color: steelblue; 
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: underline; 
+}
+
+aside ul {
+    list-style: none; 
+}
+
+aside ul li {
+    padding-left: 15px;
+    text-indent: -15px;
+    margin-bottom: 10px; 
+}
+
+
+blockquote {
+    margin: 0 40px 15px 40px;
+    font-style: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+footer {
+    background-color: steelblue;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    padding: 15px;
+    clear: both;
+}

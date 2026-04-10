@@ -88,7 +88,8 @@ header h2 {
 }
 
 .submenu li a:hover {
-    background-color: #36648b; 
+    text-decoration: underline;
+    background-color: #36648b;
 }
 
 main {

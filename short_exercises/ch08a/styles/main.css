@@ -14,13 +14,13 @@
 	box-sizing: border-box;
 }
 
-/* the default styles for the elements */
+/* base styles */
 body {
 	font-family: Arial, Helvetica, sans-serif;
-    font-size: 100%;
-    width: 80%;
-    margin: auto;
-    border: 3px solid var(--primary-color);
+	font-size: 100%;
+	width: 80%;
+	margin: auto;
+	border: 3px solid var(--primary-color);
 }
 header, section, aside, footer { padding: 1em; }
 h1, h2, h3, p, article { padding-bottom: .5em; }
@@ -29,7 +29,7 @@ h2 { font-size: 120%; }
 h3 { font-size: 110%; }
 a:focus, a:hover { font-style: italic; }
 
-/* the styles for the header */
+/* header */
 header {
 	border-bottom: 3px solid var(--primary-color);
 	background-image: linear-gradient(30deg, 
@@ -39,6 +39,7 @@ header {
 		var(--light-accent) 75%, 
 		var(--accent-color) 100%);
 	& h2 {
+		display: none; 
 		font-size: 175%;
 		color: var(--primary-color);
 		padding-bottom: 0;
@@ -54,23 +55,17 @@ header {
 	}
 }
 
-/* the styles for the main element */
+/* main element (Mobile-First) */
 main {
 	clear: left;
 	display: flex;
+	flex-direction: column; /* Stacked by default */
 }
 
-/* the styles for the section */
+/* section and aside */
 section {
-	order: 2;
-	flex-basis: 75%;
-	& h1 {
-		color: var(--primary-color);
-		margin: 0;
-	}
+	& h1 { color: var(--primary-color); margin: 0; }
 }
-
-/* the styles for the article */
 article {
 	& img {
 		float: left;
@@ -79,37 +74,39 @@ article {
 		width: min(100%, 250px);
 	}
 }
-
-/* the styles for the aside */
 aside {
-	order: 1;
-	flex-basis: 25%;
-	& h2 {
-		color: var(--primary-color);
-	}
-	& img {
-		margin-bottom: .9em;
-	}
+	& h2 { color: var(--primary-color); }
+	& img { margin-bottom: .9em; }
 }
 
-/* the styles for the footer */
+/* Media query for large screens */
+@media screen and (min-width: 768px) {
+    main {
+        flex-direction: row;
+    }
+    header h2 {
+        display: block; /* Show header heading on large screens */
+    }
+    section {
+        order: 2;
+        flex-basis: 75%;
+    }
+    aside {
+        order: 1;
+        flex-basis: 25%;
+    }
+}
+
+/* footer */
 footer {
 	background-color: var(--primary-color);
-	& p {
-		text-align: center;
-		color: white;
-		padding-bottom: 0; 
-	}
+	& p { text-align: center; color: white; padding-bottom: 0; }
 }
 
-/* the styles for the navigation menu */
+/* navigation */
 nav {
 	background-color: var(--primary-color);
-	& ul { 
-		display: flex;
-		flex-direction: column;
-		list-style: none;
-	}
+	& ul { display: flex; flex-direction: column; list-style: none; }
 	& a {
 		display: block;
 		padding: .75em;
@@ -117,14 +114,10 @@ nav {
 		font-weight: bold;
 		color: var(--light);
 	}
-	& a:hover {
-		color: var(--accent-color);
-	}
+	& a:hover { color: var(--accent-color); }
 	& a.current {
 		background-color: var(--accent-color);
 		color: var(--dark);
 	}
-	& a.current:hover { 
-		font-style: normal; /* override default hover effect */
-	}
+	& a.current:hover { font-style: normal; }
 }

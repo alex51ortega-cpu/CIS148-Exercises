@@ -106,21 +106,20 @@ footer {
 #checkbox-toggle:checked ~ .menu-btn::before { content: "\2715"; }
 #checkbox-toggle:not(:checked) ~ .menu-btn::before { content: "\2630"; }
 
-
+/* Mobile Submenu */
 .menu li { 
 	position: relative; 
-	width: 100%; 
+	width: max-content; 
 }
 
 .submenu {
 	display: none;
 	position: absolute;
-	left: 50%; 
+	left: 100%; 
 	top: 0;
-	background-color: #7a111a; 
+	background-color: var(--primary-color); 
 	width: 180px;
 	z-index: 1000;
-	border-left: 2px solid var(--accent-color);
 }
 
 .menu li:hover > .submenu {
@@ -140,14 +139,16 @@ footer {
 		display: flex !important;
 		flex-direction: row;
 		justify-content: space-evenly;
-		align-items: stretch; /* Back to normal for desktop */
+		align-items: stretch;
 	}
+    
+    .menu li {
+        width: auto; 
+    }
 
-	/* Desktop submenu */
 	.submenu {
 		left: 0;
 		top: 100%; 
 		width: 200px;
-		border-left: none;
 	}
 }

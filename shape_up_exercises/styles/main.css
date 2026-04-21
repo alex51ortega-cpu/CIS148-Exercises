@@ -38,8 +38,6 @@ header h2 {
     color: black;
 }
 
-
-/* Mobile dropdown */
 .navbar {
     background-color: #4682b4;
     position: relative;
@@ -55,6 +53,10 @@ header h2 {
     cursor: pointer;
     text-align: right;
 }
+
+.menu-btn::before { content: "\2630"; }
+
+#checkbox-toggle:checked ~ .menu-btn::before { content: "\2715"; }
 
 .menu {
     display: none;
@@ -102,6 +104,7 @@ header h2 {
     font-weight: normal;
 }
 
+/* Triangle points right for mobile */
 .menu a small::before {
     content: "\25B6";   
     font-size: 0.7em;   
@@ -151,6 +154,9 @@ footer {
     header img { float: left; margin-right: 15px; width: 15%; max-width: 120px; }
     header h1 { font-size: 3.5vw; }
     header h2 { font-size: 2vw; }
+
+    /* Triangle points down */
+    .menu a small::before { content: "\25BC"; }
 
     .menu-btn { display: none; }
     .menu { 

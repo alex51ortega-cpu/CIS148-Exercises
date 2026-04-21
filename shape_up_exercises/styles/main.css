@@ -51,7 +51,7 @@ header h2 {
     font-size: 24px;
     padding: 10px 20px;
     cursor: pointer;
-    text-align: right;
+    text-align: left;
 }
 
 .menu-btn::before { content: "\2630"; }

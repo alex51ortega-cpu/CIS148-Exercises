@@ -1,18 +1,53 @@
-/* Navbar as container */
+//* Variables  */
+:root {
+	--primary-color: #931420; 
+	--accent-color: #f6bb73;  
+	--light-accent: #fffded;
+	--light: white;
+	--dark: black;
+}
+
+/* Reset and body */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	width: 80%;
+	margin: auto;
+	background-color: white;
+	border: 3px solid var(--primary-color);
+}
+
+/* Header */
+header {
+	border-bottom: 3px solid var(--primary-color);
+	background-image: linear-gradient(30deg, var(--accent-color) 0%, var(--light-accent) 25%, var(--light) 50%, var(--light-accent) 75%, var(--accent-color) 100%);
+	padding: 1em;
+}
+
+header h2 { color: var(--primary-color); font-size: 175%; }
+header img { float: left; margin-right: 30px; width: 66px; }
+
+/* Main layout */
+main { display: flex; clear: left; }
+section { flex-basis: 75%; padding: 1em; }
+aside { flex-basis: 25%; padding: 1em; }
+section h1, aside h2 { color: var(--primary-color); }
+
+/* Navigation colors and container logic */
 .navbar {
 	container-type: inline-size;
 	container-name: nav-container;
 	position: relative;
-	background-color: var(--primary-color);
-	& ul { list-style-type: none; margin: 0; }
-	& a { display: block; padding: .75em; text-decoration: none; color: var(--light); }
-	& a.current { color: var(--accent-color); font-weight: bold; }
+	background-color: var(--primary-color); 
 }
 
-/* Checkbox */
 input[type="checkbox"] { display: none; }
 
-/* Mobile button styles */
 .menu-btn {
 	display: block;
 	color: var(--light);
@@ -22,62 +57,54 @@ input[type="checkbox"] { display: none; }
 	text-align: left;
 }
 
-/* Hamburger symbol! and close symbol when checked */
 .menu-btn::before { content: "\2630"; }
 input[type="checkbox"]:checked ~ .menu-btn::before { content: "\2715"; }
 
-/* Hides menu */
 .menu {
 	display: none;
-	flex-direction: column;
+	list-style: none;
 }
 
-/* 6. Drop-down display when checked */
+/* Mobile dropdown   */
 input[type="checkbox"]:checked ~ .menu {
 	display: flex;
+	flex-direction: column;
+	background-color: var(--primary-color);
 	position: absolute;
 	width: 100%;
 	z-index: 1000;
-	background-color: var(--primary-color);
 }
 
-/* Triangle for the small submenu  */
-.menu li:has(ul) > a::after {
-	content: "\25B6";
-	font-size: 0.8em;
-	margin-left: 10px;
+.menu a {
+	display: block;
+	padding: .75em;
+	text-decoration: none;
+	color: var(--light);
 }
 
-/* Submenu for right small */
+.menu a.current { color: var(--accent-color); font-weight: bold; }
+
+/* Maroon Background */
 .submenu {
 	display: none;
 	position: absolute;
-	left: 100%;
-	top: 0;
 	background-color: var(--primary-color);
-	z-index: 1001;
+	border: 1px solid var(--accent-color);
 }
-.menu li:hover > .submenu { display: block; }
 
-/* Container Query for larger container */
+/* Container query for horizontal colored bar */
 @container nav-container (min-width: 560px) {
 	.menu-btn { display: none; }
-	
 	.menu {
 		display: flex !important;
 		flex-direction: row;
 		justify-content: space-evenly;
-		position: static;
 	}
+}
 
-	/* Down triangle for larger containers */
-	.menu li:has(ul) > a::after {
-		content: "\25BC";
-	}
-
-/* Submenu large display */
-	.submenu {
-		top: 100%;
-		left: 0;
-	}
+footer {
+	background-color: var(--primary-color);
+	padding: 1em;
+	color: white;
+	text-align: center;
 }

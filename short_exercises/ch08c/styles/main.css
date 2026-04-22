@@ -21,6 +21,7 @@ body {
     margin: auto;
     background-color: white;
     border: 3px solid var(--primary-color);
+    overflow-x: hidden;
 }
 
 header, section, aside, footer { padding: 1em; }
@@ -105,6 +106,7 @@ input[type="checkbox"]:checked ~ .menu {
     .menu {
         display: flex !important;
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-evenly;
         position: static;
     }

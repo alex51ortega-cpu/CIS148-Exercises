@@ -89,6 +89,7 @@ input[type="checkbox"]:checked ~ .menu {
     padding: .75em;
     text-decoration: none;
     color: var(--light);
+    text-align: center;
 }
 
 .menu a.current { color: var(--accent-color); font-weight: bold; }

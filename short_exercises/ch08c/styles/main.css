@@ -40,7 +40,6 @@ header img { float: left; margin: 0 30px; width: 66px; }
 main { 
     clear: left; 
     display: flex;
-    flex-wrap: wrap;
 }
 
 section { 

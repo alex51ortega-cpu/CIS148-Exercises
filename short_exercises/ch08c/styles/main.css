@@ -1,110 +1,123 @@
-//* Variables  */
+/* variables */
 :root {
-	--primary-color: #931420; 
-	--accent-color: #f6bb73;  
-	--light-accent: #fffded;
-	--light: white;
-	--dark: black;
+    --primary-color: #931420;
+    --accent-color: #f6bb73;
+    --light-accent: #fffded;
+    --light: white;
+    --dark: black;
 }
 
-/* Reset and body */
+/* reset */
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-	font-family: Arial, Helvetica, sans-serif;
-	width: 80%;
-	margin: auto;
-	background-color: white;
-	border: 3px solid var(--primary-color);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    width: 80%;
+    margin: auto;
+    background-color: white;
+    border: 3px solid var(--primary-color);
 }
 
-/* Header */
+header, section, aside, footer { padding: 1em; }
+h1, h2, h3, p, article, blockquote { padding-bottom: .5em; }
+
+/* header styles */
 header {
-	border-bottom: 3px solid var(--primary-color);
-	background-image: linear-gradient(30deg, var(--accent-color) 0%, var(--light-accent) 25%, var(--light) 50%, var(--light-accent) 75%, var(--accent-color) 100%);
-	padding: 1em;
+    border-bottom: 3px solid var(--primary-color);
+    background-image: linear-gradient(30deg, var(--accent-color) 0%, var(--light-accent) 25%, var(--light) 50%, var(--light-accent) 75%, var(--accent-color) 100%);
 }
 
-header h2 { color: var(--primary-color); font-size: 175%; }
-header img { float: left; margin-right: 30px; width: 66px; }
+header h2 { font-size: 175%; color: var(--primary-color); }
+header img { float: left; margin: 0 30px; width: 66px; }
 
-/* Main layout */
-main { display: flex; clear: left; }
-section { flex-basis: 75%; padding: 1em; }
-aside { flex-basis: 25%; padding: 1em; }
-section h1, aside h2 { color: var(--primary-color); }
+/* layout styles */
+main { clear: left; display: flex; }
+section { flex-basis: 75%; }
+section h1 { color: var(--primary-color); }
+aside { flex-basis: 25%; }
+aside h2 { color: var(--primary-color); }
 
-/* Navigation colors and container logic */
+/* Defines navbar as container */
 .navbar {
-	container-type: inline-size;
-	container-name: nav-container;
-	position: relative;
-	background-color: var(--primary-color); 
+    container-type: inline-size;
+    container-name: nav-container;
+    background-color: var(--primary-color);
+    position: relative;
 }
 
+/* Hides checkboxes */
 input[type="checkbox"] { display: none; }
 
+/* Mobile button styles */
 .menu-btn {
-	display: block;
-	color: var(--light);
-	font-size: 24px;
-	padding: 10px;
-	cursor: pointer;
-	text-align: left;
+    display: block;
+    color: var(--light);
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    text-align: left;
 }
 
-.menu-btn::before { content: "\2630"; }
-input[type="checkbox"]:checked ~ .menu-btn::before { content: "\2715"; }
+/*  Icons */
+.menu-btn::before { content: "\2630"; } /* Hamburger */
+input[type="checkbox"]:checked ~ .menu-btn::before { content: "\2715"; } /* X */
 
+/* Mobile Menu */
 .menu {
-	display: none;
-	list-style: none;
+    display: none;
+    list-style-type: none;
+    margin: 0;
 }
 
-/* Mobile dropdown   */
 input[type="checkbox"]:checked ~ .menu {
-	display: flex;
-	flex-direction: column;
-	background-color: var(--primary-color);
-	position: absolute;
-	width: 100%;
-	z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    background-color: var(--primary-color);
+    z-index: 1000; 
 }
 
 .menu a {
-	display: block;
-	padding: .75em;
-	text-decoration: none;
-	color: var(--light);
+    display: block;
+    padding: .75em;
+    text-decoration: none;
+    color: var(--light);
 }
 
 .menu a.current { color: var(--accent-color); font-weight: bold; }
 
-/* Maroon Background */
-.submenu {
-	display: none;
-	position: absolute;
-	background-color: var(--primary-color);
-	border: 1px solid var(--accent-color);
+/* Submenu & small triangles  */
+.menu li:has(ul) > a::after {
+    content: " \25B6"; /* Right triangle -> */
+    font-size: 0.8em;
 }
 
-/* Container query for horizontal colored bar */
+/* Container query larger containers */
 @container nav-container (min-width: 560px) {
-	.menu-btn { display: none; }
-	.menu {
-		display: flex !important;
-		flex-direction: row;
-		justify-content: space-evenly;
-	}
+    .menu-btn { display: none; }
+    
+    .menu {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: space-evenly;
+        position: static;
+    }
+
+    /* Change to down triangle */
+    .menu li:has(ul) > a::after {
+        content: " \25BC"; 
+    }
 }
 
 footer {
-	background-color: var(--primary-color);
-	padding: 1em;
-	color: white;
-	text-align: center;
+    background-color: var(--primary-color);
+    padding: 1em;
+    text-align: center;
+    color: white;
 }

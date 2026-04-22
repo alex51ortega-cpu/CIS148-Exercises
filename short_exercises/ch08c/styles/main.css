@@ -43,9 +43,10 @@ main {
 }
 
 section { 
-    flex: 1 1 70%;  
-    min-width: 0;   
-    padding: 1em; 
+    flex: 0 0 80%;      
+    max-width: 80%;
+    padding: 1em;
+    min-width: 0;
 }
 
 section h1 { 
@@ -53,9 +54,10 @@ section h1 {
 }
 
 aside { 
-    flex: 1 1 25%;
-    min-width: 250px;
-    padding: 1em;
+    flex: 0 0 20%;       
+    max-width: 20%;      
+    padding: 1em 0.5em; 
+    min-width: 0;
 }
 
 img {

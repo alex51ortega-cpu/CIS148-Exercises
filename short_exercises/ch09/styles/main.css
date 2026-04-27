@@ -192,6 +192,11 @@ footer {
 	}
 }
 
+/* Keeps the "Phone:" label black */
+.label {
+    color: var(--dark);
+}
+
 /* the styles for the Contact Us section */
 .contact {
 	padding: 2em 5em;	

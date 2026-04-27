@@ -196,3 +196,29 @@ footer {
 .contact {
 	padding: 2em 5em;	
 }
+
+section ul {
+    list-style-type: square;
+    margin-left: 2em;
+}
+
+section li {
+    margin-bottom: 0.5em; 
+    padding-left: 0.5em; 
+}
+
+/* Linking format */
+section a {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+section a:hover, 
+section a:focus {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.contact {
+	padding: 2em 5em;	
+}

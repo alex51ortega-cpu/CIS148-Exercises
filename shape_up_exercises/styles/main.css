@@ -143,7 +143,7 @@ section h2, aside h2 {
 }
 
 section ul { 
-    list-style-type: square; 
+    list-style-type: disc; 
     margin-left: 25px;
     margin-bottom: 15px;
 }

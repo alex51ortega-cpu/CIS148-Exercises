@@ -134,8 +134,33 @@ section h1 { font-size: 26px; margin-bottom: 15px; }
 h3 { margin-top: 15px; color: maroon; font-size: 18px; }
 p { font-size: 14px; line-height: 1.5; margin-bottom: 15px; }
 blockquote { margin: 0 40px 15px; font-style: italic; font-size: 14px; }
-aside h2 { color: maroon; font-size: 1.2em; margin-bottom: 10px; }
-aside ul { list-style-type: disc; }
+
+section h2, aside h2 { 
+    color: maroon; 
+    font-size: 1.2em; 
+    margin-bottom: 10px; 
+    margin-top: 10px;
+}
+
+section ul { 
+    list-style-type: square; 
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+footer {
+    background-color: #4682b4;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    padding: 15px;
+}
+
+section p a {
+    color: maroon;
+    font-weight: bold;
+}
+
 aside ul li a { color: #4682b4; font-weight: bold; }
 
 footer {

@@ -176,3 +176,9 @@ footer {
     section { flex: 3; padding: 20px 30px; }
     aside { flex: 1; margin: 20px 20px 0 0; }
 }
+
+#aside_links {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+}

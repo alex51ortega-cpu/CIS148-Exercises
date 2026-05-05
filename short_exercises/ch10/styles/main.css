@@ -7,6 +7,11 @@
 	--dark: black;
 }
 
+@font-face {
+	font-family: "Ink Free";
+	src: url("../fonts/InkFree-Regular.ttf") format("truetype");
+}
+
 /* reset */
 * {
 	margin: 0;
@@ -17,14 +22,20 @@
 /* the default styles for the elements */
 body {
 	font-family: Arial, Helvetica, sans-serif;
-    font-size: 100%;
-    width: 80%;
-    margin: auto;
-    border: 3px solid var(--primary-color);
+	font-size: 100%;
+	width: 80%;
+	margin: auto;
+	border: 3px solid var(--primary-color);
 }
 header, section, aside, footer { padding: 1em; }
 h1, h2, h3, p, article, blockquote { padding-bottom: .5em; }
-h1 { font-size: 150%; }
+
+/* applies custom font to h1 */
+h1 { 
+	font-size: 150%; 
+	font-family: "Ink Free", sans-serif; 
+}
+
 h2 { font-size: 120%; }
 h3 { font-size: 110%; }
 a:focus, a:hover { font-style: italic; }
@@ -87,11 +98,22 @@ article {
 	border-top: 3px solid var(--primary-color);
 	padding-top: .5em;
 	margin-bottom: .5em;
-	& img {
+
+	/* Modify so text flows around the figure on the left */
+	& figure {
 		float: left;
 		margin: .25em 1em 1em 0;
-		border: 1px solid var(--dark);
 		width: min(100%, 225px);
+
+		& img {
+			border: 1px solid var(--dark);
+			width: 100%;
+		}
+	}
+
+	/* Mix accent 65% and primary 35% */
+	& a {
+		color: color-mix(in srgb, var(--accent-color) 65%, var(--primary-color) 35%);
 	}
 }
 

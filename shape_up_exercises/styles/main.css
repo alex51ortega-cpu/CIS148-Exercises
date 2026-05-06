@@ -154,6 +154,7 @@ footer {
     font-size: 12px;
     text-align: center;
     padding: 15px;
+    clear: both;
 }
 
 section p a {
@@ -162,14 +163,6 @@ section p a {
 }
 
 aside ul li a { color: #4682b4; font-weight: bold; }
-
-footer {
-    background-color: #4682b4;
-    color: white;
-    font-size: 12px;
-    text-align: center;
-    padding: 15px;
-}
 
 /* Desktop styles */
 @media only screen and (min-width: 768px) {
@@ -206,4 +199,50 @@ footer {
     list-style-type: none;
     padding-left: 0;
     margin-left: 0;
+}
+
+@font-face {
+    font-family: "American Captain";
+    src: url("../fonts/American Captain.ttf") format("truetype");
+}
+
+header h1 {
+    font-family: "American Captain", sans-serif;
+    font-style: normal; 
+}
+
+section figure {
+    float: left;
+    width: 250px;
+    margin: 0 20px 10px 0;
+}
+
+section figure img {
+    width: 100%;
+    display: block;
+    border: 1px solid #4682b4;
+}
+
+section figcaption {
+    font-size: 13px;
+    font-style: italic;
+    text-align: center;
+    margin-top: 5px;
+}
+
+aside ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+aside ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+aside ul li img {
+    width: 16px;
+    height: auto;
+    margin-right: 10px;
 }

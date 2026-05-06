@@ -1,46 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Shape Up! | Stress</title>
-	<link rel="stylesheet" href="styles/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape Up! | Stress Relief</title>
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
     <header>
         <img src="images/logo.png" alt="Shape Up Logo">
-        <h1>Shape Up!</h1>
-        <h2>Stress Relief</h2>
+        <h1>SHAPE UP!</h1>
+        <h2>Find the best fit for you</h2>
     </header>
 
-    <main>
-        <aside>
-            <h2>Stress Relief Links</h2>
-            <ul>
-                <li><img src="images/icon1.png" alt=""> <a href="#">Healthline</a></li>
-                <li><img src="images/icon2.png" alt=""> <a href="#">Verywell Mind</a></li>
-                <li><img src="images/icon3.png" alt=""> <a href="#">Mayo Clinic</a></li>
-            </ul>
-        </aside>
+    <nav class="navbar">
+        <input type="checkbox" id="checkbox-toggle">
+        <label for="checkbox-toggle" class="menu-btn"></label>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Strength Training</a></li>
+            <li><a href="#">Cardio Exercises</a></li>
+            <li><a href="stress.html" class="current">Stress Relief <small></small></a></li>
+            <li><a href="#">Healthy Diets <small></small></a></li>
+        </ul>
+    </nav>
 
+    <main>
         <section>
             <h1>Stress Relief</h1>
+            <p>We all encounter stress at one time or another. So it's important to be able to recognize stress and learn how to deal with it.</p>
+            
             <h2>What is stress?</h2>
-            
+			
             <figure>
-                <img src="images/stress.jpg" alt="Stress visualization">
-                <figcaption>Common signs of stress</figcaption>
+                <img src="images/stress.jpg" alt="Stressful office environment">
+                <figcaption>Stress can come from work, family, or health problems</figcaption>
             </figure>
+			
+            <p>Stress is the feeling that people have when they are overloaded and struggling to cope with demands. Anything that poses a real or perceived challenge or threat to a person's well-being can cause stress.</p>
             
-            <p>Stress is a feeling of emotional or physical tension. It can come from any event or thought that makes you feel frustrated, angry, or nervous. Stress is your body's reaction to a challenge or demand. In short bursts, stress can be positive, such as when it helps you avoid danger or meet a deadline. But when stress lasts for a long time, it may harm your health.</p>
+            <p>Stress can also be a motivator. It can be essential to survival.</p>
             
-            <p>There are two main types of stress: Acute stress and Chronic stress. Acute stress is short-term stress that goes away quickly. You feel it when you slam on the brakes, have a fight with your partner, or ski down a steep slope. Chronic stress is stress that lasts for a longer period of time. You may have chronic stress if you have money problems, an unhappy marriage, or trouble at work.</p>
+            <p>The "fight-or-flight" mechanism helps us know when and how to respond to danger. But when this mechanism is triggered too easily, or when there are too many stressors at one time, it can become harmful to a person's mental and physical health.</p>
+
+            <h2>How to manage your stress</h2>
+            <p>To help manage stress, try the following:</p>
+            <ul>
+                <li>Take a break from what you're doing</li>
+                <li>Exercise on a regular basis</li>
+                <li>Take time to smile and laugh</li>
+                <li>Get support from family and friends</li>
+                <li>Meditate</li>
+            </ul>
         </section>
+        <aside>
+            <h2>Additional resources</h2>
+            <ul>
+                <li><img src="images/icon1.png" alt=""><a href="#">Physical activity and health</a></li>
+                <li><img src="images/icon2.png" alt=""><a href="#">Stretching exercises</a></li>
+                <li><img src="images/icon3.png" alt=""><a href="#">Strength training</a></li>
+                <li><img src="images/icon4.png" alt=""><a href="#">Cardiovascular training</a></li>
+                <li><img src="images/icon5.png" alt=""><a href="#">Yoga workout</a></li>
+            </ul>
+        </aside>
     </main>
 
     <footer>
-        <p>&copy; 2026 Shape Up!</p>
+        <p>&copy; Shape Up!</p>
     </footer>
 </body>
 </html>

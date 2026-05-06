@@ -13,6 +13,11 @@ body {
     background-color: white;
 }
 
+@font-face {
+    font-family: "American Captain";
+    src: url("../fonts/American Captain.ttf") format("truetype");
+}
+
 header {
     background: linear-gradient(to bottom, white, #b0c4de); 
     border-bottom: 3px solid #4682b4;
@@ -28,9 +33,10 @@ header img {
 }
 
 header h1 {
-    font-size: 24px;
     color: #4682b4;
-    font-style: italic;
+    font-family: "American Captain", sans-serif; 
+    font-style: normal; 
+    font-size: 24px;
 }
 
 header h2 {
@@ -104,7 +110,6 @@ header h2 {
     font-weight: normal;
 }
 
-/* Triangle points right for mobile */
 .menu a small::before {
     content: "\25B6";   
     font-size: 0.7em;   
@@ -120,14 +125,6 @@ main {
 
 section {
     padding: 20px;
-}
-
-aside {
-    margin: 20px;
-    padding: 15px 15px 15px 35px;
-    border: 2px solid #4682b4;
-    border-radius: 15px;
-    background-color: white;
 }
 
 section h1 { font-size: 26px; margin-bottom: 15px; }
@@ -148,23 +145,82 @@ section ul {
     margin-bottom: 15px;
 }
 
+section p a {
+    color: maroon;
+    font-weight: bold;
+}
+
+
+section figure {
+    float: left; 
+    width: 250px;
+    margin: 0 20px 10px 0; 
+}
+
+section figure img {
+    width: 100%;
+    display: block;
+    border: 1px solid #4682b4;
+}
+
+section figcaption {
+    font-size: 13px;
+    font-weight: bold; 
+    text-align: left;
+    margin-top: 5px;
+}
+
+aside {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #4682b4;
+    border-radius: 25px; 
+    background-color: white;
+}
+
+aside h2 {
+    text-align: center; 
+}
+
+aside ul {
+    list-style-type: none; 
+    padding-left: 0;
+    margin-left: 0;
+}
+
+aside ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+aside ul li img {
+    width: 16px;
+    height: auto;
+    margin-right: 10px;
+}
+
+aside ul li a { 
+    color: #4682b4; 
+    font-weight: bold; 
+    text-decoration: underline;
+}
+
+#aside_links {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
 footer {
     background-color: #4682b4;
     color: white;
     font-size: 12px;
     text-align: center;
     padding: 15px;
-    clear: both;
+    clear: both; 
 }
 
-section p a {
-    color: maroon;
-    font-weight: bold;
-}
-
-aside ul li a { color: #4682b4; font-weight: bold; }
-
-/* Desktop styles */
 @media only screen and (min-width: 768px) {
     body { width: 95%; margin: 0 auto; }
 
@@ -173,7 +229,6 @@ aside ul li a { color: #4682b4; font-weight: bold; }
     header h1 { font-size: 3.5vw; }
     header h2 { font-size: 2vw; }
 
-    /* Triangle points down */
     .menu a small::before { content: "\25BC"; }
 
     .menu-btn { display: none; }
@@ -193,56 +248,4 @@ aside ul li a { color: #4682b4; font-weight: bold; }
     main { flex-direction: row; align-items: flex-start; }
     section { flex: 3; padding: 20px 30px; }
     aside { flex: 1; margin: 20px 20px 0 0; }
-}
-
-#aside_links {
-    list-style-type: none;
-    padding-left: 0;
-    margin-left: 0;
-}
-
-@font-face {
-    font-family: "American Captain";
-    src: url("../fonts/American Captain.ttf") format("truetype");
-}
-
-header h1 {
-    font-family: "American Captain", sans-serif;
-    font-style: normal; 
-}
-
-section figure {
-    float: left;
-    width: 250px;
-    margin: 0 20px 10px 0;
-}
-
-section figure img {
-    width: 100%;
-    display: block;
-    border: 1px solid #4682b4;
-}
-
-section figcaption {
-    font-size: 13px;
-    font-style: italic;
-    text-align: center;
-    margin-top: 5px;
-}
-
-aside ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-aside ul li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-aside ul li img {
-    width: 16px;
-    height: auto;
-    margin-right: 10px;
 }

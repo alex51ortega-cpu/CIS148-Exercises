@@ -245,3 +245,23 @@ footer {
     section { flex: 3; padding: 20px 30px; }
     aside { flex: 1; margin: 20px 20px 0 0; }
 }
+
+aside.stress-aside {
+    padding: 12px;
+}
+
+aside.stress-aside h2 {
+    margin-bottom: 5px !important; 
+}
+
+aside.stress-aside ul li {
+    margin-bottom: 2px !important; 
+    display: flex;
+    align-items: center;
+}
+
+aside.stress-aside img {
+    width: 22px;
+    height: auto;
+    margin-right: 8px;
+}

@@ -4,7 +4,9 @@
     box-sizing: border-box;
 }
 
-html { background-color: #e6e6e6; }
+html { 
+    background-color: white; 
+}
 
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -35,7 +37,6 @@ header img {
 header h1 {
     color: #4682b4;
     font-family: "American Captain", sans-serif; 
-    font-style: normal; 
     font-size: 24px;
 }
 
@@ -150,7 +151,6 @@ section p a {
     font-weight: bold;
 }
 
-
 section figure {
     float: left; 
     width: 250px;
@@ -172,7 +172,7 @@ section figcaption {
 
 aside {
     margin: 20px;
-    padding: 20px;
+    padding: 15px; 
     border: 2px solid #4682b4;
     border-radius: 25px; 
     background-color: white;
@@ -180,36 +180,33 @@ aside {
 
 aside h2 {
     text-align: center; 
+    margin-top: 0;
+    margin-bottom: 10px; 
 }
 
-aside ul {
+#aside_links {
     list-style-type: none; 
-    padding-left: 0;
-    margin-left: 0;
+    padding: 0;
+    margin: 0;
 }
 
-aside ul li {
+#aside_links li {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 5px; 
 }
 
-aside ul li img {
-    width: 16px;
+#aside_links img {
+    width: 25px; 
     height: auto;
     margin-right: 10px;
 }
 
-aside ul li a { 
+#aside_links a { 
     color: #4682b4; 
     font-weight: bold; 
     text-decoration: underline;
-}
-
-#aside_links {
-    list-style-type: none;
-    padding-left: 0;
-    margin-left: 0;
+    font-size: 14px;
 }
 
 footer {

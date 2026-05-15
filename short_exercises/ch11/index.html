@@ -56,6 +56,17 @@
                 text-align: left;
                 border: none;
             }
+            
+            /* FIXED: Force cells to align left on mobile so numbers don't vanish */
+            th, td, tbody td:last-child, tfoot td {
+                text-align: left;
+            }
+
+            /* NEW: Adds alternating light grey stripes to rows ONLY in mobile view */
+            tbody tr:nth-child(even) {
+                background-color: lightgrey;
+            }
+
             td[data-label] {
                 position: relative;
                 padding-left: 50%;

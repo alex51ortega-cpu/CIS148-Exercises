@@ -57,13 +57,11 @@
                 border: none;
             }
             
-            /* FIXED: Force cells to align left on mobile so numbers don't vanish */
             th, td, tbody td:last-child, tfoot td {
                 text-align: left;
             }
 
-            /* NEW: Adds alternating light grey stripes to rows ONLY in mobile view */
-            tbody tr:nth-child(even) {
+            tbody tr:nth-child(even) td {
                 background-color: lightgrey;
             }
 

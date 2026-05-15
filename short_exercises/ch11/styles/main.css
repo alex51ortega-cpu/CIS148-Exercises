@@ -31,6 +31,10 @@ tbody td:last-child, tfoot td {
     text-align: right;
 }
 
+tfoot th {
+    text-align: center;
+}
+
 /* Media Query for narrow screen */
 @media (max-width: 640px) {
     table, thead, tbody, tfoot, tr, th, td {

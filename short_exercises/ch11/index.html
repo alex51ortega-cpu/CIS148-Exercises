@@ -16,7 +16,6 @@
             border: 1px solid black;
             width: 100%; 
         }
-        
         caption {
             font-weight: bold;
             font-size: 1.2em;
@@ -26,16 +25,24 @@
         thead, tfoot {
             background-color: lightgreen;
         }
+        
         th, td {
-            border: 1px solid black;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            border-left: none;
+            border-right: none;
             padding: .35em 1em .35em .5em;
             text-align: left;
             vertical-align: middle;
         }
+     
+        th[rowspan] {
+            border-right: 1px solid black;
+        }
+        
         tbody tr:nth-child(even) td {
             background-color: lightgrey;
         }
-        
         tbody td:last-child, tfoot td {
             text-align: right;
         }
@@ -47,22 +54,21 @@
                 width: 100%;
             }
             thead {
-                display: none;
+                display: none; 
             }
             tr {
                 margin-bottom: .5em;
                 border: 1px solid black;
             }
-            
             th[rowspan], tfoot th {
                 background-color: lightgreen;
                 text-align: left;
                 border: none;
             }
-            /* Narrow screen formatting */
             td[data-label] {
                 position: relative;
                 padding-left: 50%;
+                border: none; 
             }
             td[data-label]::before {
                 content: attr(data-label);

@@ -1,16 +1,59 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Complete a Form</title>
-	<link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
 <h1>Please complete our survey</h1>
 <form action="confirmation.html" method="post">
     
+    <fieldset>
+        <legend>Contact information</legend>
+        
+        <label for="email"><u>E</u>mail address:</label>
+        <input type="email" id="email" name="email" required accesskey="e" autofocus>
+        
+        <label for="firstName"><u>F</u>irst name:</label>
+        <input type="text" id="firstName" name="firstName" required accesskey="f">
+        
+        <label for="lastName"><u>L</u>ast name:</label>
+        <input type="text" id="lastName" name="lastName" required accesskey="l">
+    </fieldset>
+
+    <fieldset>
+        <legend>Geographic information</legend>
+        
+        <label for="state">State:</label>
+        <input type="text" id="state" name="state" required pattern="[A-Za-z]{2}" placeholder="Two characters" title="Please enter a 2-character state abbreviation">
+        
+        <label for="zip">Zip code:</label>
+        <input type="text" id="zip" name="zip" required pattern="[0-9]{5}" placeholder="Five digits" title="Please enter a 5-digit zip code">
+    </fieldset>
+
+    <fieldset>
+        <legend>Source</legend>
+        
+        <label for="source">How did you hear about us?</label>
+        <select id="source" name="source">
+            <option value="search">Web Search</option>
+            <option value="friend">Word of Mouth</option>
+            <option value="social">Social Media</option>
+            <option value="other">Other</option>
+        </select>
+        
+        <label for="comments">Additional comments:</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Add any additional comments here."></textarea>
+    </fieldset>
+
+    <div class="button-group">
+        <button type="submit" class="btn btn-submit">Submit</button>
+        <button type="reset" class="btn btn-reset">Reset</button>
+    </div>
+
 </form>
 </body>
 </html>

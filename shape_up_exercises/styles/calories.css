@@ -1,1 +1,93 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    background-color: #ffffff;
+    color: #333333;
+    padding: 1.5em;
+}
 
+h1 {
+    color: #2c3e50;
+    margin-bottom: 1em;
+}
+
+/* Large screens layout */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 2em;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+th, td {
+    border: 1px solid #bdc3c7;
+    padding: 0.6em 1em;
+    text-align: left;
+}
+
+thead th {
+    background-color: #34495e;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+td[data-label="Calories"] {
+    text-align: right;
+}
+
+tbody th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    vertical-align: top;
+    color: #2c3e50;
+}
+
+/* Media query for small screens as 640px */
+@media (max-width: 640px) {
+    table, thead, tbody, tr, th, td {
+        display: block;
+        width: 100%;
+    }
+
+    thead {
+        display: none;
+    }
+
+    /* Separate each row group for mobile */
+    tr {
+        margin-bottom: 1em;
+        border: 2px solid #bdc3c7;
+        border-radius: 4px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    tbody th[rowspan] {
+        background-color: #34495e;
+        color: #ffffff;
+        font-size: 1.1em;
+        padding: 0.5em;
+        border: none;
+        text-align: center;
+    }
+
+    td {
+        border: none;
+        border-bottom: 1px solid #ecf0f1;
+        padding: 0.5em 0.75em;
+        text-align: left !important;
+    }
+
+    td[data-label="Calories"] {
+        position: relative;
+        padding-left: 45%;
+    }
+
+    td[data-label="Calories"]::before {
+        content: attr(data-label) ": ";
+        position: absolute;
+        left: 0.75em;
+        font-weight: bold;
+        color: #7f8c8d;
+    }
+}

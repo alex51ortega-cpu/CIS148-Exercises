@@ -6,7 +6,7 @@
     <title>Shape Up! | Meal Plan</title>
     <link rel="icon" href="../images/favicon.ico">
     <link rel="stylesheet" href="../styles/main.css">
-    <link rel="stylesheet" href="styles/meals.css">
+    <link rel="stylesheet" href="../styles/meals.css">
 </head>
 
 <body>
@@ -49,26 +49,26 @@
 
     <main>
         <section>
-            <h1 class="form-title">Meal Plan Order Form</h1>
-            <p>Fill out the form as completely as possible and we will email you a weekly meal plan, customized for you—your lifestyle, your goals, and your personal needs.</p>
-            <p>Asterisks (*) indicate required entries.</p>
+            <h1 class="form-main-title">Meal plan order form</h1>
+            <p>Fill out the form as completely as possible and we will email you a weekly meal plan, customized for you--<em>your</em> lifestyle, <em>your</em> goals, and <em>your</em> personal needs.</p>
+            <p class="required-note">Asterisks (*) indicate required entries.</p>
             
-            <form action="https://httpbin.org/post" method="post" class="meal-form">
+            <form action="#" method="post" class="meal-form">
                 
                 <fieldset>
                     <legend>Tell us about yourself</legend>
                     
-                    <div class="form-row">
+                    <div class="form-group">
                         <label for="full-name">Full name *</label>
-                        <input type="text" id="full-name" name="full_name" required>
+                        <input type="text" id="full-name" name="full_name" class="req-input" required>
                     </div>
                     
-                    <div class="form-row">
+                    <div class="form-group">
                         <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" class="req-input" required>
                     </div>
                     
-                    <div class="form-row">
+                    <div class="form-group">
                         <label for="gender">Gender *</label>
                         <select id="gender" name="gender" required>
                             <option value="">Select a gender</option>
@@ -78,19 +78,19 @@
                         </select>
                     </div>
                     
-                    <div class="form-row">
+                    <div class="form-group">
                         <label for="height">Height *</label>
-                        <input type="text" id="height" name="height" placeholder="Example: 5ft, 6in" required>
+                        <input type="text" id="height" name="height" class="req-input" placeholder="Example: 5ft, 6in" required>
                     </div>
                     
-                    <div class="form-row">
+                    <div class="form-group">
                         <label for="weight">Weight *</label>
-                        <input type="text" id="weight" name="weight" placeholder="Example: 145lbs" required>
+                        <input type="text" id="weight" name="weight" class="req-input" placeholder="Example: 145lbs" required>
                     </div>
                     
-                    <div class="form-row">
-                        <label for="age-group">Age</label>
-                        <select id="age-group" name="age_group">
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <select id="age" name="age">
                             <option value="">Select your age</option>
                             <option value="under-18">under 18</option>
                             <option value="18-34">18 - 34</option>
@@ -104,41 +104,47 @@
                 <fieldset>
                     <legend>Lifestyle and goals</legend>
                     
-                    <div class="radio-group">
-                        <p>Which currently matches your present lifestyle?</p>
-                        <label><input type="radio" name="lifestyle" value="active" checked> Active</label>
-                        <label><input type="radio" name="lifestyle" value="moderate"> Moderate</label>
-                        <label><input type="radio" name="lifestyle" value="sedentary"> Sedentary</label>
+                    <div class="choice-container">
+                        <p class="question-text">Which currently matches your present lifestyle?</p>
+                        <div class="inline-choices">
+                            <label><input type="radio" name="lifestyle" value="active"> Active</label>
+                            <label><input type="radio" name="lifestyle" value="moderate"> Moderate</label>
+                            <label><input type="radio" name="lifestyle" value="sedentary" checked> Sedentary</label>
+                        </div>
                     </div>
                     
-                    <div class="radio-group">
-                        <p>What are your weight goals?</p>
-                        <label><input type="radio" name="weight_goal" value="gain"> Gain</label>
-                        <label><input type="radio" name="weight_goal" value="lose"> Lose</label>
-                        <label><input type="radio" name="weight_goal" value="maintain" checked> Maintain</label>
+                    <div class="choice-container">
+                        <p class="question-text">What are your weight goals?</p>
+                        <div class="inline-choices">
+                            <label><input type="radio" name="weight_goal" value="gain"> Gain</label>
+                            <label><input type="radio" name="weight_goal" value="lose"> Lose</label>
+                            <label><input type="radio" name="weight_goal" value="maintain" checked> Maintain</label>
+                        </div>
                     </div>
                 </fieldset>
 
                 <fieldset>
                     <legend>Food preferences and restrictions</legend>
-                    <p>Do you have any dietary restrictions? (select all that apply)</p>
                     
-                    <div class="checkbox-group">
-                        <label><input type="checkbox" name="restrictions" value="vegetarian"> Vegetarian</label>
-                        <label><input type="checkbox" name="restrictions" value="gluten-free"> Gluten-free</label>
-                        <label><input type="checkbox" name="restrictions" value="kosher"> Kosher</label>
-                        <label><input type="checkbox" name="restrictions" value="low-salt"> Low salt</label>
+                    <div class="choice-container">
+                        <p class="question-text">Do you have any dietary restrictions? (select all that apply)</p>
+                        <div class="inline-choices checkbox-row">
+                            <label><input type="checkbox" name="restrictions" value="vegetarian"> Vegetarian</label>
+                            <label><input type="checkbox" name="restrictions" value="gluten-free"> Gluten-free</label>
+                            <label><input type="checkbox" name="restrictions" value="kosher"> Kosher</label>
+                            <label><input type="checkbox" name="restrictions" value="low-salt"> Low salt</label>
+                        </div>
                         
-                        <label class="other-label">
-                            <input type="checkbox" name="restrictions" value="other"> Other, please explain:
-                        </label>
-                        <textarea name="other_explanation" rows="4" placeholder="Enter other dietary restrictions here..."></textarea>
+                        <div class="other-explain-block">
+                            <label class="inline-label"><input type="checkbox" name="restrictions" value="other"> Other, please explain:</label>
+                            <textarea id="explanation" name="explanation" rows="5"></textarea>
+                        </div>
                     </div>
                 </fieldset>
 
-                <fieldset class="button-fieldset">
-                    <input type="submit" value="Submit" class="btn btn-submit">
-                    <input type="reset" value="Reset" class="btn btn-reset">
+                <fieldset class="actions-block">
+                    <input type="submit" value="Submit" class="form-btn submit-btn">
+                    <input type="reset" value="Reset" class="form-btn reset-btn">
                 </fieldset>
 
             </form>

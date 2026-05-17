@@ -1,93 +1,88 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 100%;
-    background-color: #ffffff;
-    color: #333333;
-    padding: 1.5em;
-}
-
-h1 {
-    color: #2c3e50;
+.table-title {
+    color: #800000;
+    text-align: center;
     margin-bottom: 1em;
 }
 
-/* Large screens layout */
-table {
+.calorie-table {
     border-collapse: collapse;
     width: 100%;
-    max-width: 800px;
     margin-bottom: 2em;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-size: 0.95em;
+    border: 2px solid #333333;
 }
 
-th, td {
-    border: 1px solid #bdc3c7;
-    padding: 0.6em 1em;
-    text-align: left;
-}
-
-thead th {
-    background-color: #34495e;
+.calorie-table thead th {
+    background-color: #4682b4; /* Steel blue color */
     color: #ffffff;
+    padding: 0.5em 0.8em;
     font-weight: bold;
+    text-align: left;
+    border: 1px solid #333333;
 }
 
-td[data-label="Calories"] {
+.calorie-table tbody th.cat-cell {
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: bold;
+    text-align: left;
+    vertical-align: top;
+    padding: 0.5em 0.8em;
+    border: 1px solid #333333;
+}
+
+.calorie-table tbody td {
+    padding: 0.5em 0.8em;
+    border: 1px solid #333333;
+    background-color: #ffffff;
+}
+
+.calorie-table td[data-label="Calories"] {
     text-align: right;
 }
 
-tbody th {
-    background-color: #f8f9fa;
-    font-weight: bold;
-    vertical-align: top;
-    color: #2c3e50;
-}
-
-/* Media query for small screens as 640px */
 @media (max-width: 640px) {
-    table, thead, tbody, tr, th, td {
+    .calorie-table, 
+    .calorie-table thead, 
+    .calorie-table tbody, 
+    .calorie-table tr, 
+    .calorie-table th, 
+    .calorie-table td {
         display: block;
         width: 100%;
     }
 
-    thead {
+    .calorie-table thead {
         display: none;
     }
 
-    /* Separate each row group for mobile */
-    tr {
+    .calorie-table tr {
         margin-bottom: 1em;
-        border: 2px solid #bdc3c7;
-        border-radius: 4px;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        border: 2px solid #333333;
     }
 
-    tbody th[rowspan] {
-        background-color: #34495e;
+    .calorie-table tbody th.cat-cell {
+        background-color: #4682b4;
         color: #ffffff;
-        font-size: 1.1em;
-        padding: 0.5em;
-        border: none;
         text-align: center;
+        border: none;
     }
 
-    td {
+    .calorie-table td {
         border: none;
-        border-bottom: 1px solid #ecf0f1;
-        padding: 0.5em 0.75em;
+        border-bottom: 1px solid #dddddd;
         text-align: left !important;
     }
 
-    td[data-label="Calories"] {
+    .calorie-table td[data-label="Calories"] {
         position: relative;
-        padding-left: 45%;
+        padding-left: 40%;
     }
 
-    td[data-label="Calories"]::before {
+    .calorie-table td[data-label="Calories"]::before {
         content: attr(data-label) ": ";
         position: absolute;
-        left: 0.75em;
+        left: 0.8em;
         font-weight: bold;
-        color: #7f8c8d;
     }
 }

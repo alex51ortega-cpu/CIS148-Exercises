@@ -1,129 +1,142 @@
-.form-title {
-    color: #800000; 
-    margin-bottom: 0.5em;
-}
-
-form.meal-form {
-    margin-top: 1.5em;
-}
-
-fieldset {
-    border: 1px solid #bdc3c7;
-    border-radius: 5px;
-    padding: 1.2em;
-    margin-bottom: 1.5em;
-    background-color: #fafafa;
-}
-
-legend {
+.form-main-title {
+    font-size: 1.6em;
     font-weight: bold;
-    color: #2c3e50;
-    padding: 0 0.5em;
-    font-size: 1.1em;
+    color: #000000;
+    margin-bottom: 0.3em;
 }
 
-.form-row {
+.required-note {
+    margin-bottom: 1.5em;
+}
+
+.meal-form fieldset {
+    border: 1px solid #b5b5b5;
+    border-radius: 6px;
+    padding: 1em 1.2em;
+    margin-bottom: 1.2em;
+    background-color: #ffffff;
+}
+
+.meal-form legend {
+    font-weight: bold;
+    color: #800000; 
+    padding: 0 0.4em;
+    font-size: 1em;
+}
+
+.form-group {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    flex-direction: column;
+    margin-bottom: 0.8em;
+}
+
+.form-group label {
+    font-weight: normal;
+    margin-bottom: 0.2em;
+    font-size: 0.95em;
+}
+
+.form-group input.req-input {
+    border: 1px solid #ff0000; 
+    border-radius: 4px;
+    padding: 0.4em;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+
+.form-group select {
+    border: 1px solid #767676;
+    border-radius: 4px;
+    padding: 0.4em;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+
+.choice-container {
     margin-bottom: 1em;
 }
 
-.form-row label {
-    width: 120px;
-    font-weight: bold;
-}
-
-.form-row input[type="text"],
-.form-row input[type="email"],
-.form-row select {
-    flex: 1;
-    min-width: 200px;
-    padding: 0.4em;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.radio-group p,
-.checkbox-group p {
-    font-weight: bold;
-    margin-bottom: 0.5em;
-}
-
-.radio-group label,
-.checkbox-group label {
-    display: block;
+.question-text {
     margin-bottom: 0.4em;
+    font-size: 0.95em;
+}
+
+.inline-choices {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    align-items: center;
+    font-size: 0.95em;
+}
+
+.inline-choices label {
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+    font-weight: normal;
     cursor: pointer;
 }
 
-.other-label {
-    margin-bottom: 0.2em !important;
+.other-explain-block {
+    margin-top: 0.6em;
+}
+
+.other-explain-block label {
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+    font-weight: normal;
+    margin-bottom: 0.3em;
 }
 
 textarea {
     width: 100%;
-    padding: 0.5em;
-    border: 1px solid #ccc;
+    max-width: 500px;
+    border: 1px solid #767676;
     border-radius: 4px;
-    resize: vertical;
-    margin-top: 0.3em;
+    padding: 0.4em;
     box-sizing: border-box;
+    display: block;
 }
 
-.button-fieldset {
+.meal-form fieldset.actions-block {
     border: none;
     padding: 0;
+    margin-top: 1.5em;
     background: none;
     display: flex;
-    gap: 1em;
+    gap: 1.2em;
 }
 
-.btn {
+.form-btn {
     font-family: Arial, sans-serif;
     font-size: 1em;
-    padding: 0.6em 1.5em;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
     font-weight: bold;
-    transition: background-color 0.2s ease;
+    padding: 0.5em 2.2em;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0,0,0,0.2);
+    transition: background-color 0.15s ease;
 }
 
-/* Submit button */
-.btn-submit {
+.submit-btn {
     background-color: #4682b4; 
     color: #ffffff;
+    border: 2px solid #294a66;
 }
 
-/* Reset button */
-.btn-reset {
-    background-color: #e74c3c;
+.reset-btn {
+    background-color: #800000; 
     color: #ffffff;
+    border: 2px solid #4a0000;
 }
 
-.btn-submit:hover {
-    background-color: #34495e; 
+.submit-btn:hover {
+    background-color: #36648b; 
 }
 
-.btn-reset:hover {
-    background-color: #c0392b; /
-}
-
-@media (max-width: 480px) {
-    .form-row {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .form-row label {
-        margin-bottom: 0.3em;
-        width: 100%;
-    }
-    
-    .form-row input[type="text"],
-    .form-row input[type="email"],
-    .form-row select {
-        width: 100%;
-    }
+.reset-btn:hover {
+    background-color: #5c0000; 
 }

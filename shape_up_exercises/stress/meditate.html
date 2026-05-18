@@ -1,15 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Shape Up! | Meditation</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape Up! | Meditation</title>
+    <link rel="icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/meditation.css">
 </head>
 
 <body>
-	<main>
-	    <h1>Meditation</h1>
-		<h2>Under Construction</h2>
-	</main>
+    <header>
+        <img src="../images/shape_up_logo.png" alt="Shape Up Logo">
+        <h1>Shape Up!</h1>
+        <h2>Find the best fit for you</h2>
+    </header>
+
+    <nav class="navbar">
+        <input type="checkbox" id="checkbox-toggle">
+        <label for="checkbox-toggle" class="menu-btn"></label>
+
+        <ul class="menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../strength/strength.html">Strength Training</a></li>
+            <li><a href="../cardio/cardio.html">Cardio Exercises</a></li>
+            
+            <li>
+                <a href="stress.html" class="current">Stress Relief <small></small></a>
+                <ul class="submenu">
+                    <li><a href="stress.html">What is stress?</a></li>
+                    <li><a href="tips.html">5 Helpful Tips</a></li>
+                    <li><a href="meditate.html">Meditation</a></li>
+                    <li><a href="vipassana.html">Vipassana</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="../diet/diet.html">Healthy Diets <small></small></a>
+                <ul class="submenu">
+                    <li><a href="../diet/diet.html">Diet Plan</a></li>
+                    <li><a href="../diet/calories.html">Calorie Counter</a></li>
+                    <li><a href="../diet/meals.html">Meal Plan</a></li>
+                    <li><a href="#">Recipes</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h1 class="meditation-title">What is Meditation?</h1>
+            <p>Meditation is one path toward transforming the mind. Buddhist meditation practices encourage and develop concentration, clarity, and emotional positivity. When you begin a meditation practice, you may learn the patterns and habits of your mind. Meditation offers you a way to cultivate new and more positive ways to approach the things you do throughout your day. Meditation can have a transformative effect and can lead to positive changes as well as a new understanding of life.</p>
+            
+            <div class="media-container">
+                <video controls width="100%" class="meditation-video">
+                    <source src="../media/meditation.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <h2 class="audio-title">Choose your meditation music</h2>
+            <div class="media-container">
+                <audio controls class="meditation-audio">
+                    <source src="../media/meditation.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </section>
+
+        <aside>
+            <h2>Additional resources</h2>
+            <ul>
+                <li><a href="https://www.cdc.gov/physical-activity-basics/benefits/index.html" target="_blank">Physical activity and health</a></li>
+                <li><a href="https://www.heart.org/en/healthy-living/fitness/fitness-basics/flexibility-exercise-stretching" target="_blank">Stretching exercises</a></li>
+                <li><a href="https://www.heart.org/en/healthy-living/fitness/fitness-basics/strength-and-resistance-training-exercise" target="_blank">Strength training</a></li>
+                <li><a href="https://www.health.harvard.edu/exercise-and-fitness/interval-training-for-a-stronger-heart" target="_blank">Cardiovascular training</a></li>
+                <li><a href="https://www.self.com/gallery/power-yoga-workout" target="_blank">Yoga workout</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Shape Up!</p>
+    </footer>
 </body>
 </html>

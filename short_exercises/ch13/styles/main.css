@@ -17,10 +17,10 @@
 /* the default styles for the elements */
 body {
 	font-family: Arial, Helvetica, sans-serif;
-    font-size: 100%;
-    width: 80%;
-    margin: auto;
-    border: 3px solid var(--primary-color);
+	font-size: 100%;
+	width: 80%;
+	margin: auto;
+	border: 3px solid var(--primary-color);
 }
 header, section, aside, footer { padding: 1em; }
 h1, h2, h3, p, article { padding-bottom: .5em; }
@@ -72,7 +72,8 @@ section {
 
 /* the styles for the article */
 article {
-	& img {
+	/* video here */
+	& img, & video {
 		float: left;
 		margin: .25em 1em 1em 0;
 		border: 1px solid var(--dark);
@@ -100,4 +101,5 @@ footer {
 		color: white;
 		padding-bottom: 0; 
 	}
+}
 }

@@ -1,49 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shape Up! | Meditation</title>
-    <link rel="icon" href="../images/favicon.ico">
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/meditation.css">
+    <link rel="icon" href="../images/favicon.ico">
 </head>
 
 <body>
     <header>
-        <img src="../images/shape_up_logo.png" alt="Shape Up Logo">
-        <h1>Shape Up!</h1>
+        <a href="../index.html">
+            <img src="../images/shape_up_logo.png" alt="Shape Up Logo">
+        </a>
+        <h1><span style="font-weight: 900; font-style: italic;">SHAPE UP!</span></h1>
         <h2>Find the best fit for you</h2>
     </header>
 
     <nav class="navbar">
         <input type="checkbox" id="checkbox-toggle">
         <label for="checkbox-toggle" class="menu-btn"></label>
-
         <ul class="menu">
             <li><a href="../index.html">Home</a></li>
             <li><a href="../strength/strength.html">Strength Training</a></li>
-            <li><a href="../cardio/cardio.html">Cardio Exercises</a></li>
-            
-            <li>
-                <a href="stress.html" class="current">Stress Relief <small></small></a>
-                <ul class="submenu">
-                    <li><a href="stress.html">What is stress?</a></li>
-                    <li><a href="tips.html">5 Helpful Tips</a></li>
-                    <li><a href="meditate.html">Meditation</a></li>
-                    <li><a href="vipassana.html">Vipassana</a></li>
-                </ul>
-            </li>
-
-            <li>
-                <a href="../diet/diet.html">Healthy Diets <small></small></a>
-                <ul class="submenu">
-                    <li><a href="../diet/diet.html">Diet Plan</a></li>
-                    <li><a href="../diet/calories.html">Calorie Counter</a></li>
-                    <li><a href="../diet/meals.html">Meal Plan</a></li>
-                    <li><a href="#">Recipes</a></li>
-                </ul>
-            </li>
+            <li><a href="../cardio.html">Cardio Exercises</a></li>
+            <li><a href="stress.html" class="current">Stress Relief <small></small></a></li>
+            <li><a href="../diet.html">Healthy Diets <small></small></a></li>
         </ul>
     </nav>
 
@@ -89,20 +72,20 @@
             </div>
         </section>
 
-        <aside>
-            <h2>Additional resources</h2>
-            <ul>
-                <li><a href="https://www.cdc.gov/physical-activity-basics/benefits/index.html" target="_blank">Physical activity and health</a></li>
-                <li><a href="https://www.heart.org/en/healthy-living/fitness/fitness-basics/flexibility-exercise-stretching" target="_blank">Stretching exercises</a></li>
-                <li><a href="https://www.heart.org/en/healthy-living/fitness/fitness-basics/strength-and-resistance-training-exercise" target="_blank">Strength training</a></li>
-                <li><a href="https://www.health.harvard.edu/exercise-and-fitness/interval-training-for-a-stronger-heart" target="_blank">Cardiovascular training</a></li>
-                <li><a href="https://www.self.com/gallery/power-yoga-workout" target="_blank">Yoga workout</a></li>
+        <aside class="stress-aside">
+            <h2 class="maroon-header">Additional resources</h2>
+            <ul id="aside_links">
+                <li><img src="../images/run-icon.png" alt=""><a href="#">Physical activity and health</a></li>
+                <li><img src="../images/stretch-icon.png" alt=""><a href="#">Stretching exercises</a></li>
+                <li><img src="../images/strength-icon.png" alt=""><a href="#">Strength training</a></li>
+                <li><img src="../images/cardio-icon.png" alt=""><a href="#">Cardiovascular training</a></li>
+                <li><img src="../images/yoga-icon.png" alt=""><a href="#">Yoga workout</a></li>
             </ul>
         </aside>
     </main>
 
     <footer>
-        <p>&copy; 2026 Shape Up!</p>
+        <p>&copy; Shape Up!</p>
     </footer>
 </body>
 </html>

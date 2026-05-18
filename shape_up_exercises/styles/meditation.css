@@ -1,0 +1,30 @@
+.meditation-title {
+    color: #800000; 
+    margin-bottom: 0.4em;
+    font-size: 1.6em;
+}
+
+.audio-title {
+    color: #800000;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    font-size: 1.25em;
+}
+
+.media-container {
+    margin: 1em 0;
+    width: 100%;
+    max-width: 550px; 
+}
+
+.meditation-video {
+    display: block;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    background-color: #000000;
+}
+
+.meditation-audio {
+    display: block;
+    width: 100%; 
+}

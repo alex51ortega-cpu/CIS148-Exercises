@@ -1,18 +1,24 @@
-.meditation-title {
-    color: #800000; 
+.meditation-title-black {
+    color: #000000; 
     margin-bottom: 0.4em;
     font-size: 1.6em;
 }
 
+.media-label {
+    margin-top: 1.2em;
+    font-weight: bold;
+    color: #000000;
+}
+
 .audio-title {
-    color: #800000;
+    color: #800000; 
     margin-top: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.8em;
     font-size: 1.25em;
 }
 
 .media-container {
-    margin: 1em 0;
+    margin: 0.5em 0 1.5em 0;
     width: 100%;
     max-width: 550px; 
 }
@@ -24,7 +30,19 @@
     background-color: #000000;
 }
 
+.audio-track-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+    max-width: 550px;
+    margin-bottom: 1.5em;
+}
+
+.audio-container {
+    width: 100%;
+}
+
 .meditation-audio {
     display: block;
-    width: 100%; 
+    width: 100%;
 }

@@ -67,13 +67,17 @@ header h2 {
 
 .menu {
     display: none;
-    flex-direction: column;
     list-style: none;
     padding: 0;
-    align-items: flex-start;
+    
+    /* Grid mobile stacking */
+    display: none;
+    grid-template-columns: 1fr; 
+    justify-items: start;
 }
 
-#checkbox-toggle:checked ~ .menu { display: flex; }
+/* when checked, mobile nav displays grid stack */
+#checkbox-toggle:checked ~ .menu { display: grid; }
 
 .menu li { position: relative; width: max-content; }
 
@@ -118,9 +122,10 @@ header h2 {
     vertical-align: middle;
 }
 
+/* mobile, changed from flex to grid */
 main {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     width: 100%;
 }
 
@@ -184,14 +189,10 @@ aside h2 {
     margin-bottom: 10px;
 }
 
-#aside_links {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
+/* changed from flex to grid */
 #aside_links li {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr;
     align-items: center;
     margin-bottom: 5px;
 }
@@ -228,9 +229,11 @@ footer {
     .menu a small::before { content: "\25BC"; }
 
     .menu-btn { display: none; }
+    
+    /* desktop nav, flex to grid */
     .menu { 
-        display: flex !important; 
-        flex-direction: row; 
+        display: grid !important; 
+        grid-template-columns: repeat(auto-fit, minmax(max-content, 1fr)); 
         padding: 2px 20px; 
     }
     
@@ -241,9 +244,14 @@ footer {
         left: 0;
     }
 
-    main { flex-direction: row; align-items: flex-start; }
-    section { flex: 3; padding: 20px 30px; }
-    aside { flex: 1; margin: 20px 20px 0 0; }
+    /*  for desptop, chnaging from flex to grid  */
+    main { 
+        grid-template-columns: 3fr 1fr; 
+        align-items: start; 
+    }
+    
+    section { padding: 20px 30px; }
+    aside { margin: 20px 20px 0 0; }
 }
 
 aside.stress-aside {
@@ -254,9 +262,11 @@ aside.stress-aside h2 {
     margin-bottom: 5px !important; 
 }
 
+/* changing from flex to grid */
 aside.stress-aside ul li {
     margin-bottom: 2px !important; 
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr; 
     align-items: center;
 }
 

@@ -143,7 +143,7 @@ footer {
 	& p {
 		padding: .5em 0; 
 	}	
-	& section img {
+	& img {
 		animation: pulseImage 2s ease-in-out infinite alternate;
 	}
 }
@@ -283,7 +283,7 @@ footer {
 @media (prefers-reduced-motion: reduce) {
 	aside img,
 	aside img:hover,
-	.speaker section img {
+	.speaker img { /* FIXED: Updated target selector here as well */
 		animation: none !important;
 		transition: none !important;
 		transform: none !important;

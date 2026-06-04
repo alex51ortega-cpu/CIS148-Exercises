@@ -7,7 +7,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f4f6f9; /* gray background for the whole screen */
-    color: #333333; /* black text for high readability */
+    color: #333333;            /* black text for high readability */
     line-height: 1.6;
 }
 
@@ -62,17 +62,21 @@ nav a:hover, nav a.active {
     color: #800000;
 }
 
-/* main page layout */
 main {
     display: flex;
     flex-direction: row;
     gap: 0;
-    max-width: 1000px;
+    max-width: 950px;   
     margin: 30px auto;
     background-color: #ffffff; 
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+section {
+    width: 70%; /* main text area to 70% of the page width */
+    padding-right: 40px;   
 }
 
 section h2 {
@@ -97,10 +101,9 @@ section p {
     background-color: #ffffff;
 }
 
-/* Right column - blends seamlessly into the single main background */
 aside {
-    flex: 1;
-    padding-left: 30px; 
+    width: 30%; /* sidebar 30% of the page width */
+    padding-left: 10px;        
     height: fit-content;
 }
 

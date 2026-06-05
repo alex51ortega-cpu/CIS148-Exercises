@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -133,7 +135,7 @@ aside li strong {
 
 /* footer style */
 footer {
-    background: linear-gradient(135deg, #333333 0%, #111111 100%);
+    background: linear-gradient(135deg, #4a0000 0%, #111111 100%);
     color: #cccccc;
     text-align: center;
     padding: 20px;

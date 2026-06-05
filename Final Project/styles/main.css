@@ -9,7 +9,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f4f6f9; /* gray background for the whole screen */
-    color: #333333; /* black text for high readability */
+    color: #333333;  /* black text for high readability */
     line-height: 1.6;
 }
 
@@ -17,7 +17,7 @@ body {
 header {
     background: linear-gradient(135deg, #800000 0%, #a31c1c 50%, #4a0000 100%);
     color: #ffffff;
-    padding: 25px 20px 0 20px;
+    padding: 25px 0 0 0; 
     border-bottom: 5px solid #000000;
 }
 
@@ -27,6 +27,7 @@ header h1 {
     letter-spacing: 1px;
     margin-bottom: 5px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    padding: 0 20px; 
 }
 
 header p {
@@ -34,6 +35,7 @@ header p {
     font-size: 1.1rem;
     color: #ffd700; 
     margin-bottom: 20px;
+    padding: 0 20px;
 }
 
 /* navigation bar */
@@ -41,15 +43,15 @@ nav ul {
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    background-color: #000000; /* Creates the single solid horizontal rectangle */
-    padding: 0;
+    background-color: #000000; /* single solid rectangle */
+    padding: 0 20px;
     margin: 0;
-    border-top-left-radius: 5px; 
-    border-top-right-radius: 5px;
+    border-top-left-radius: 0; 
+    border-top-right-radius: 0;
 }
 
 nav li {
-    margin-right: 0; /* Removes the gaps between individual links */
+    margin-right: 0; 
 }
 
 nav a {
@@ -62,13 +64,12 @@ nav a {
     transition: background-color 0.2s ease, color 0.2s ease; 
 }
 
-/* Style for active page tab */
+/* style for active page tab */
 nav a.active {
     background-color: #ffffff;
     color: #800000;
 }
 
-/* Sleek dark highlight when hovering over inactive tabs */
 nav a:hover:not(.active) {
     background-color: #333333;
     color: #ffffff;

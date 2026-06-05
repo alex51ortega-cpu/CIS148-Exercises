@@ -149,11 +149,11 @@ aside li strong {
 
 /* footer style */
 footer {
-    background: linear-gradient(135deg, #4a0000 0%, #111111 100%);
+    background: linear-gradient(135deg, #071624 0%, #0c1f31 100%);
     color: #cccccc;
     text-align: center;
     padding: 20px;
     font-size: 0.85rem;
     margin-top: 50px;
-    border-top: 3px solid #800000;
+    border-top: 3px solid #1a446c;
 }

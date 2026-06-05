@@ -128,8 +128,7 @@ aside li {
 
 aside li strong {
     color: #800000;          
-    display: block;           
-    margin-bottom: 3px;
+    display: inline; /* Changed from block to inline */
 }
 
 /* footer style */

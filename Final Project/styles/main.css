@@ -15,9 +15,9 @@ body {
 
 /* nav menu with head and horizontal */
 header {
-    background: linear-gradient(135deg, #800000 0%, #a31c1c 50%, #4a0000 100%);
+    background: linear-gradient(135deg, #0f2b46 0%, #1a446c 50%, #071624 100%);
     color: #ffffff;
-    padding: 25px 0 0 0; 
+    padding: 25px 0 0 0;        
     border-bottom: 5px solid #000000;
 }
 
@@ -67,7 +67,7 @@ nav a {
 /* style for active page tab */
 nav a.active {
     background-color: #ffffff;
-    color: #800000;
+    color: #1a446c;
 }
 
 nav a:hover:not(.active) {
@@ -95,10 +95,10 @@ section {
 
 section h2 {
     font-size: 1.8rem;
-    font-family: 'Oswald', sans-serif; /* embedded font */
-    color: #800000;
+    font-family: 'Oswald', sans-serif; 
+    color: #1a446c;
     margin-bottom: 20px;
-    border-bottom: 2px solid #800000;
+    border-bottom: 2px solid #1a446c;
     padding-bottom: 5px;
 }
 

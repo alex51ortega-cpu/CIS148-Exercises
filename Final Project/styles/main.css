@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght=500;700&display=swap');
 
 * {
     margin: 0;
@@ -9,7 +9,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f4f6f9; /* gray background for the whole screen */
-    color: #333333;            /* black text for high readability */
+    color: #333333; /* black text for high readability */
     line-height: 1.6;
 }
 
@@ -23,7 +23,7 @@ header {
 
 header h1 {
     font-size: 2.5rem;
-    font-family: 'Georgia', serif;
+    font-family: 'Oswald', sans-serif; /* embedded font */
     letter-spacing: 1px;
     margin-bottom: 5px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
@@ -36,34 +36,45 @@ header p {
     margin-bottom: 20px;
 }
 
+/* navigation bar */
 nav ul {
     list-style-type: none;
     display: flex;
     flex-direction: row;
+    background-color: #000000; /* Creates the single solid horizontal rectangle */
+    padding: 0;
+    margin: 0;
+    border-top-left-radius: 5px; 
+    border-top-right-radius: 5px;
 }
 
 nav li {
-    margin-right: 5px;
+    margin-right: 0; /* Removes the gaps between individual links */
 }
 
 nav a {
     display: block;
-    background-color: #000000;
     color: #ffffff;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 12px 24px;
     font-weight: bold;
     font-size: 0.95rem;
-    border-top-left-radius: 5px; 
-    border-top-right-radius: 5px;
-    transition: background-color 0.2s ease; 
+    transition: background-color 0.2s ease, color 0.2s ease; 
 }
 
-nav a:hover, nav a.active {
+/* Style for active page tab */
+nav a.active {
     background-color: #ffffff;
     color: #800000;
 }
 
+/* Sleek dark highlight when hovering over inactive tabs */
+nav a:hover:not(.active) {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+/* main layout */
 main {
     display: flex;
     flex-direction: row;
@@ -83,6 +94,7 @@ section {
 
 section h2 {
     font-size: 1.8rem;
+    font-family: 'Oswald', sans-serif; /* embedded font */
     color: #800000;
     margin-bottom: 20px;
     border-bottom: 2px solid #800000;
@@ -110,6 +122,7 @@ aside {
 }
 
 aside h3 {
+    font-family: 'Oswald', sans-serif; /* embedded font */
     color: #333333;
     font-size: 1.25rem;
     margin-bottom: 15px;
@@ -130,7 +143,7 @@ aside li {
 
 aside li strong {
     color: #800000;          
-    display: inline; /* Changed from block to inline */
+    display: inline; 
 }
 
 /* footer style */
